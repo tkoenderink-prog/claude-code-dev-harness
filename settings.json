@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/user-prompt-submit"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/stop"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Read(**/*)",
+      "Write(**/*)",
+      "Edit(**/*)",
+      "Bash(*)"
+    ],
+    "deny": [
+      "Read(.env*)",
+      "Read(secrets/**)",
+      "Read(**/*.key)",
+      "Read(**/*.pem)",
+      "Bash(rm -rf /)",
+      "Bash(git push --force)"
+    ]
+  },
+  "agents": {
+    "orchestrator": {
+      "model": "claude-sonnet-4-5",
+      "tools": ["Task", "TodoWrite", "Read", "Write", "Edit", "Grep", "Glob", "Bash"],
+      "max_context": 200000
+    },
+    "architect": {
+      "model": "claude-sonnet-4-5",
+      "tools": ["Read", "Grep", "Glob", "WebSearch"],
+      "max_context": 100000
+    },
+    "engineer": {
+      "model": "claude-sonnet-4-5",
+      "tools": ["Read", "Write", "Edit", "Bash", "Grep", "Glob"],
+      "max_context": 150000
+    },
+    "tester": {
+      "model": "claude-sonnet-4-5",
+      "tools": ["Bash", "Read", "Write", "Edit", "Grep"],
+      "max_context": 100000
+    },
+    "reviewer": {
+      "model": "claude-sonnet-4-5",
+      "tools": ["Read", "Grep", "Glob", "Edit"],
+      "max_context": 100000
+    }
+  }
+}
