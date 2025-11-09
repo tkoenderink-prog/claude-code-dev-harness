@@ -1,0 +1,5 @@
+harness_version: "2.1.1"
+installed_date: "2025-11-09"
+repo_url: "https://github.com/tkoenderink-prog/claude-code-dev-harness"
+last_check: "2025-11-09T19:19:00Z"
+cache_duration_hours: 6
