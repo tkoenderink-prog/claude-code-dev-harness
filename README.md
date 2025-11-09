@@ -27,48 +27,73 @@ The Claude Code Development Harness is a comprehensive framework that enables au
 - **Decision Framework**: 95%+ autonomous decision-making
 - **State Management**: Persistent context across sessions
 
-## Quick Install
+## Installation
 
-### Prerequisites
-- Claude Code environment
-- Git
+### ⚠️ Important: Bootstrap Required
 
-### Installation Steps
+You **cannot** run `/harness-install` in a new project because that command doesn't exist until the harness is installed (chicken-and-egg problem). Use one of the bootstrap methods below for first-time installation.
 
-1. **Clone this repository**:
-   ```bash
-   cd /tmp
-   git clone https://github.com/tkoenderink-prog/claude-code-dev-harness.git
-   cd claude-code-dev-harness
-   ```
+### Method 1: One-Line Install (Easiest)
 
-2. **Copy to your project**:
-   ```bash
-   # Set your project directory
-   export PROJECT_DIR=/path/to/your/project
+```bash
+curl -sSL https://raw.githubusercontent.com/tkoenderink-prog/claude-code-dev-harness/main/install.sh | bash
+```
 
-   # Copy harness files
-   mkdir -p $PROJECT_DIR/.claude
-   cp -r .claude/* $PROJECT_DIR/.claude/
-   cp CLAUDE.md $PROJECT_DIR/
+This will:
+- Clone the harness repository
+- Install all files to your current directory
+- Set correct permissions
+- Create VERSION.lock and state directories
+- Update .gitignore
 
-   # Add to gitignore
-   echo ".claude-state/" >> $PROJECT_DIR/.gitignore
-   ```
+### Method 2: Manual Install
 
-3. **Verify installation**:
-   ```bash
-   cd $PROJECT_DIR
-   ls -la .claude/
-   ```
+```bash
+# In your project directory
+git clone --depth 1 https://github.com/tkoenderink-prog/claude-code-dev-harness.git /tmp/harness
+cp -r /tmp/harness/.claude .
+cp /tmp/harness/CLAUDE.md .
+chmod +x .claude/hooks/*
+mkdir -p .claude-state/harness/{backups,remote-cache}
+echo ".claude-state/" >> .gitignore
+rm -rf /tmp/harness
+```
 
-You should see:
-- `agents/` - 5 core agents
-- `skills/` - 11 skill categories
-- `hooks/` - 3 lifecycle hooks
-- `prompts/` - 3 prompt templates
-- `commands/` - Empty (for future slash commands)
-- `settings.json` - Configuration
+Then create `.claude/VERSION.lock`:
+```yaml
+harness_version: "2.1.0"
+installed_date: "2025-11-09"
+repo_url: "https://github.com/tkoenderink-prog/claude-code-dev-harness"
+last_check: "2025-11-09T00:00:00Z"
+cache_duration_hours: 6
+```
+
+### Method 3: Ask Claude Code
+
+If you're already in Claude Code, just ask:
+
+```
+Please install the Claude Code harness from
+https://github.com/tkoenderink-prog/claude-code-dev-harness
+
+Follow the bootstrap procedure from BOOTSTRAP.md
+```
+
+### After Installation
+
+Once installed, you'll have:
+- ✅ All `/harness-*` commands available
+- ✅ Automatic update checking every 6 hours
+- ✅ Complete agent and skill library
+- ✅ State management and version tracking
+
+**Verify installation:**
+```bash
+ls -la .claude/
+cat .claude/VERSION.lock
+```
+
+For detailed bootstrap instructions, see [BOOTSTRAP.md](BOOTSTRAP.md)
 
 ## Directory Structure
 
