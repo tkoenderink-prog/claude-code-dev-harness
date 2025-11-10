@@ -475,6 +475,9 @@ CLAUDE_LOG_LEVEL=verbose
 5. Test hooks independently
 
 ## Version History
+- v2.3.0 - Elite skills library (66 high-quality skills, 0% templates)
+- v2.2.0 - Skills transformation and categorization
+- v2.1.0 - Enhanced documentation and state management
 - v2.0.0 - Professional Autonomy model
 - v1.0.0 - Basic automation
 - v0.1.0 - Initial prototype
