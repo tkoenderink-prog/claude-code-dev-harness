@@ -212,6 +212,43 @@ dependencies: [other-skills]
 4. Estimate time requirements
 5. Return skill chain for execution
 
+### Project Skills Repository
+
+This project includes a complete local skills repository in `skills/`:
+
+**Total Skills:** 59 active skills + 1 special directory
+- **User Skills:** 38 (from ~/.claude/skills/)
+- **Plugin Skills:** 20 (from Superpowers plugin)
+- **Local Skills:** 1 (fixing-claude-code-hooks)
+- **Special:** commands/ (slash command implementations)
+
+**Structure:** Flat directory with each skill in its own subdirectory containing SKILL.md
+
+**Usage:**
+```
+Skill(skill-name)
+```
+
+**Synchronization:** To update skills from global sources:
+```bash
+./sync-skills.sh
+```
+
+**Health Checks:** Validate skills structure:
+```bash
+./check-skills-health.sh
+```
+
+**Documentation:** See `skills/README.md` for complete skills catalog with categories and descriptions.
+
+**Key Skills for Development:**
+- `systematic-debugging` - Four-phase debugging framework
+- `test-driven-development` - RED-GREEN-REFACTOR cycle
+- `writing-skills` - TDD approach to creating skills
+- `fixing-claude-code-hooks` - Diagnose and fix hook errors
+- `context-aware-reasoning` - Apply mental models proactively
+- `verification-before-completion` - Verify work before finishing
+
 ## Workflow Patterns
 
 ### Standard Development Workflow
