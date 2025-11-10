@@ -1,5 +1,5 @@
 ---
-name: integration-tests
+name: dev-integration-tests
 description: Use when working with integration testing in your project - provides testing best practices and implementation patterns
 ---
 
@@ -583,13 +583,13 @@ def fresh_database():
 
 ### GitHub Actions Example
 ```yaml
-# .github/workflows/integration-tests.yml
+# .github/workflows/dev-integration-tests.yml
 name: Integration Tests
 
 on: [push, pull_request]
 
 jobs:
-  integration-tests:
+  dev-integration-tests:
     runs-on: ubuntu-latest
 
     services:
@@ -773,7 +773,7 @@ def test_order_total_calculation(db_session):
 
 ## Related Skills
 
-- `test-driven-development` - TDD workflow for integration tests
+- `dev-test-driven-development` - TDD workflow for integration tests
 - `e2e-tests` - Full system end-to-end testing
 - `api-design` - Designing testable APIs
 - `docker-patterns` - Container patterns for testing

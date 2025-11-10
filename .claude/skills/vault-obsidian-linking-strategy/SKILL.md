@@ -245,7 +245,7 @@ Before finalizing note:
 
 ## Finding Link Candidates
 
-**Use skills/obsidian/discovering-vault-knowledge to find:**
+**Use skills/obsidian/vault-discovering-vault-knowledge to find:**
 
 ```bash
 # Find notes about similar topics
@@ -378,10 +378,10 @@ You know linking worked when:
 ## Integration with Other Skills
 
 **Called by:**
-- skills/obsidian/creating-obsidian-notes (Phase 5 - Linking)
+- skills/obsidian/vault-creating-obsidian-notes (Phase 5 - Linking)
 
 **Calls:**
-- skills/obsidian/discovering-vault-knowledge (Finding link candidates)
+- skills/obsidian/vault-discovering-vault-knowledge (Finding link candidates)
 
 ## Remember
 

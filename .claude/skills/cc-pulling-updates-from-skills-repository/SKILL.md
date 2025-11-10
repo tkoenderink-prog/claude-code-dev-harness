@@ -107,7 +107,7 @@ git stash pop
 
 Run:
 ```bash
-~/.claude/skills/using-skills/find-skills
+~/.claude/skills/cc-using-skills/find-skills
 ```
 
 Expected: Skills list displays correctly

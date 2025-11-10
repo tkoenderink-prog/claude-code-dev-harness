@@ -499,7 +499,7 @@ This cycle was designed using principles from:
 3. Design next 6-week cycle with updated data
 
 **During Cycle**:
-- Use `strength-workout-design` skill to generate daily workouts
+- Use `physical-strength-workout-design` skill to generate daily workouts
 - Skill will reference this cycle file and adapt to current week, time, equipment, recovery
 ```
 

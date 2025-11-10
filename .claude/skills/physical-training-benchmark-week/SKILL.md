@@ -461,9 +461,9 @@ Location: `Physical Training/Benchmark-Results-[Date].md`
 **Timeline**: 6-week cycles with reassessment
 
 **Next Steps**:
-1. Run `strength-cycle-design` skill
-2. Run `mobility-cycle-design` skill
-3. Begin training with `strength-workout-design` and `mobility-session-design` skills
+1. Run `physical-strength-cycle-design` skill
+2. Run `physical-mobility-cycle-design` skill
+3. Begin training with `physical-strength-workout-design` and `physical-mobility-session-design` skills
 
 ---
 

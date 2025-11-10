@@ -417,13 +417,13 @@ You followed this skill correctly when:
 ## Integration with Other Skills
 
 **Calls:**
-- skills/obsidian/creating-obsidian-notes - For note creation
-- skills/obsidian/discovering-vault-knowledge - For duplicate checking
+- skills/obsidian/vault-creating-obsidian-notes - For note creation
+- skills/obsidian/vault-discovering-vault-knowledge - For duplicate checking
 
 **Called by:**
-- skills/knowledge-resources/maintaining-book-notes - When processing author
-- skills/knowledge-resources/maintaining-mental-model-notes - When attributing creator
-- skills/knowledge-resources/discovering-relevant-frameworks - Finding thought leaders
+- skills/knowledge-resources/vault-maintaining-book-notes - When processing author
+- skills/knowledge-resources/vault-maintaining-mental-model-notes - When attributing creator
+- skills/knowledge-resources/think-discovering-relevant-frameworks - Finding thought leaders
 
 ## Remember
 

@@ -1,5 +1,5 @@
 ---
-name: query-optimization
+name: dev-query-optimization
 description: Use when working with database query optimization - provides comprehensive best practices for SQL, NoSQL, and ORM performance tuning
 ---
 

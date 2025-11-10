@@ -1,6 +1,6 @@
 ---
-name: using-skills
-description: Use when starting any conversation - establishes mandatory workflows for finding and using skills, including mandatory first response protocol, using Skill tool before announcing usage, following brainstorming before coding, and creating TodoWrite todos for checklists
+name: cc-using-skills
+description: Use when starting any conversation - establishes mandatory workflows for finding and using skills, including mandatory first response protocol, using Skill tool before announcing usage, following think-brainstorming before coding, and creating TodoWrite todos for checklists
 ---
 
 <EXTREMELY-IMPORTANT>
@@ -29,7 +29,7 @@ Before responding to ANY user message, you MUST complete this checklist:
 
 1. **Use Read tool before announcing skill usage.** The session-start hook does NOT read skills for you. Announcing without calling Read = lying.
 
-2. **Follow mandatory workflows.** Brainstorming before coding. Check for skills before ANY task.
+2. **Follow mandatory workflows.** think-brainstorming before coding. Check for skills before ANY task.
 
 3. **Create TodoWrite todos for checklists.** Mental tracking = steps get skipped. Every time.
 
@@ -47,7 +47,7 @@ If you catch yourself thinking ANY of these thoughts, STOP. You are rationalizin
 - "This doesn't count as a task" → WRONG. If you're taking action, it's a task. Check for skills.
 - "The skill is overkill for this" → WRONG. Skills exist because simple things become complex. Use it.
 - "I'll just do this one thing first" → WRONG. Check for skills BEFORE doing anything.
-- "Session-start showed it to me" → WRONG. That was using-skills only. Read the actual skill.
+- "Session-start showed it to me" → WRONG. That was cc-using-skills only. Read the actual skill.
 
 **Why:** Skills document proven techniques that save time and prevent mistakes. Not using available skills means repeating solved problems and making known errors.
 
@@ -97,9 +97,9 @@ After you've read a skill with Read tool, announce you're using it.
 "I've read the [Skill Name] skill and I'm using it to [what you're doing]."
 
 **Examples:**
-- "I've read the brainstorming skill and I'm using it to refine your idea into a design."
-- "I've read the test-driven-development skill and I'm using it to implement this feature."
-- "I've read the systematic-debugging skill and I'm using it to find the root cause."
+- "I've read the think-brainstorming skill and I'm using it to refine your idea into a design."
+- "I've read the dev-test-driven-development skill and I'm using it to implement this feature."
+- "I've read the dev-systematic-debugging skill and I'm using it to find the root cause."
 
 **Why:** Transparency helps your human partner understand your process and catch errors early. It also confirms you actually read the skill.
 
@@ -115,7 +115,7 @@ The skill itself tells you which type it is.
 
 Your human partner's specific instructions describe WHAT to do, not HOW.
 
-"Add X", "Fix Y" = the goal, NOT permission to skip brainstorming, TDD, or RED-GREEN-REFACTOR.
+"Add X", "Fix Y" = the goal, NOT permission to skip think-brainstorming, TDD, or RED-GREEN-REFACTOR.
 
 **Red flags:** "Instruction was specific" • "Seems simple" • "Workflow is overkill"
 

@@ -1,5 +1,5 @@
 ---
-name: subagent-driven-development
+name: cc-subagent-driven-development
 description: Use when executing implementation plans with independent tasks in the current session - dispatches fresh subagent for each task with code review between tasks, enabling fast iteration with quality gates
 ---
 
@@ -23,7 +23,7 @@ Execute plan by dispatching fresh subagent per task, with code review after each
 - Want continuous progress with quality gates
 
 **When NOT to use:**
-- Need to review plan first (use executing-plans)
+- Need to review plan first (use cc-executing-plans)
 - Tasks are tightly coupled (manual execution better)
 - Plan needs revision (brainstorm first)
 
@@ -63,7 +63,7 @@ Task tool (general-purpose):
 **Dispatch code-reviewer subagent:**
 ```
 Task tool (code-reviewer):
-  Use template at requesting-code-review/code-reviewer.md
+  Use template at dev-requesting-code-review/code-reviewer.md
 
   WHAT_WAS_IMPLEMENTED: [from subagent's report]
   PLAN_OR_REQUIREMENTS: Task N from [plan-file]
@@ -102,8 +102,8 @@ After all tasks complete, dispatch final code-reviewer:
 ### 7. Complete Development
 
 After final review passes:
-- Announce: "I'm using the finishing-a-development-branch skill to complete this work."
-- **REQUIRED SUB-SKILL:** Use finishing-a-development-branch
+- Announce: "I'm using the cc-finishing-a-development-branch skill to complete this work."
+- **REQUIRED SUB-SKILL:** Use cc-finishing-a-development-branch
 - Follow that skill to verify tests, present options, execute choice
 
 ## Example Workflow
@@ -176,14 +176,14 @@ Done!
 ## Integration
 
 **Required workflow skills:**
-- **writing-plans** - REQUIRED: Creates the plan that this skill executes
-- **requesting-code-review** - REQUIRED: Review after each task (see Step 3)
-- **finishing-a-development-branch** - REQUIRED: Complete development after all tasks (see Step 7)
+- **cc-writing-plans** - REQUIRED: Creates the plan that this skill executes
+- **dev-requesting-code-review** - REQUIRED: Review after each task (see Step 3)
+- **cc-finishing-a-development-branch** - REQUIRED: Complete development after all tasks (see Step 7)
 
 **Subagents must use:**
-- **test-driven-development** - Subagents follow TDD for each task
+- **dev-test-driven-development** - Subagents follow TDD for each task
 
 **Alternative workflow:**
-- **executing-plans** - Use for parallel session instead of same-session execution
+- **cc-executing-plans** - Use for parallel session instead of same-session execution
 
-See code-reviewer template: requesting-code-review/code-reviewer.md
+See code-reviewer template: dev-requesting-code-review/code-reviewer.md

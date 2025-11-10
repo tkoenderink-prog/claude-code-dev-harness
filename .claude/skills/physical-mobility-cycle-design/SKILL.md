@@ -22,7 +22,7 @@ Use this skill when:
 - Current Mobility-Cycle-*.md is 6+ weeks old
 - Significant mobility limitation discovered mid-cycle requiring redesign
 
-**Run after or concurrent with** `strength-cycle-design` to ensure coordination.
+**Run after or concurrent with** `physical-strength-cycle-design` to ensure coordination.
 
 ## Pre-Execution Autonomous Context Gathering
 
@@ -663,7 +663,7 @@ This mobility cycle was designed using:
 ## Next Steps
 
 **During This Cycle**:
-- Use `mobility-session-design` skill to generate daily mobility work
+- Use `physical-mobility-session-design` skill to generate daily mobility work
 - Skill will reference this cycle and adapt to context (pre/post/standalone)
 
 **After Week 6**:

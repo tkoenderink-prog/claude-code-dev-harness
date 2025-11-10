@@ -1,5 +1,5 @@
 ---
-name: fixing-claude-code-hooks
+name: cc-fixing-claude-code-hooks
 description: Use when encountering Claude Code hook execution errors (SessionStart, Stop, UserPromptSubmit), hooks not executing at all, JSON parsing errors from hooks, permission denied errors, path issues with spaces in filenames, or hook configuration problems - provides systematic 10-step diagnostic workflow with quick-fix checklist resolving 90% of common hook configuration, permission, environment, and path issues
 ---
 

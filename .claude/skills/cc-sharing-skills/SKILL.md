@@ -1,5 +1,5 @@
 ---
-name: sharing-skills
+name: cc-sharing-skills
 description: Use when you've developed a broadly useful skill and want to contribute it upstream via pull request - guides process of branching, committing, pushing, and creating PR to contribute skills back to upstream repository
 ---
 
@@ -17,7 +17,7 @@ Contribute skills from your local branch back to the upstream repository.
 - Skill applies broadly (not project-specific)
 - Pattern/technique others would benefit from
 - Well-tested and documented
-- Follows writing-skills guidelines
+- Follows cc-writing-skills guidelines
 
 **Keep personal when:**
 - Project-specific or organization-specific
@@ -29,7 +29,7 @@ Contribute skills from your local branch back to the upstream repository.
 
 - `gh` CLI installed and authenticated
 - Working directory is `~/.claude/skills/` (your local clone)
-- **REQUIRED:** Skill has been tested using writing-skills TDD process
+- **REQUIRED:** Skill has been tested using cc-writing-skills TDD process
 
 ## Sharing Workflow
 
@@ -191,4 +191,4 @@ Each skill should:
 
 ## Related Skills
 
-- **writing-skills** - REQUIRED: How to create well-tested skills before sharing
+- **cc-writing-skills** - REQUIRED: How to create well-tested skills before sharing

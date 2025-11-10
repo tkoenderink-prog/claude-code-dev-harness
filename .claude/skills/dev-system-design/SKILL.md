@@ -1,5 +1,5 @@
 ---
-name: system-design
+name: dev-system-design
 description: Use when designing scalable, reliable distributed systems - comprehensive guide covering architecture patterns, design principles, trade-offs, and real-world examples
 ---
 
@@ -751,11 +751,11 @@ Your design is successful when:
   - Covers replication, partitioning, transactions, consistency models
 
 - **System Design Primer** (GitHub)
-  - https://github.com/donnemartin/system-design-primer
+  - https://github.com/donnemartin/dev-system-design-primer
   - Open-source guide with examples, diagrams, Anki flashcards
 
 - **Grokking the System Design Interview** (DesignGurus)
-  - https://www.designgurus.io/course/grokking-the-system-design-interview
+  - https://www.designgurus.io/course/grokking-the-dev-system-design-interview
   - Real interview questions with detailed solutions
 
 ### Latest Resources (2024)
@@ -764,11 +764,11 @@ Your design is successful when:
   - Patterns for resilience, communication, data management
 
 - **CAP Theorem for System Design Interviews** (DesignGurus)
-  - https://www.designgurus.io/answers/detail/cap-theorem-for-system-design-interview
+  - https://www.designgurus.io/answers/detail/cap-theorem-for-dev-system-design-interview
   - Practical guide with database examples
 
 - **GeeksforGeeks System Design Guide**
-  - https://www.geeksforgeeks.org/system-design-tutorial/
+  - https://www.geeksforgeeks.org/dev-system-design-tutorial/
   - Comprehensive tutorials on scalability, databases, caching
 
 ### Tools & Technologies
@@ -781,7 +781,7 @@ Your design is successful when:
 
 ### Practice Resources
 - **HelloInterview System Design Course**
-  - https://www.hellointerview.com/learn/system-design
+  - https://www.hellointerview.com/learn/dev-system-design
   - Deep dives on CAP theorem, load balancing, caching
 
 - **Educative.io System Design Courses**

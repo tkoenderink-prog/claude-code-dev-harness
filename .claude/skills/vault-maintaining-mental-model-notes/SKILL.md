@@ -409,12 +409,12 @@ You followed this skill correctly when:
 ## Integration with Other Skills
 
 **Calls:**
-- skills/obsidian/creating-obsidian-notes - For note creation workflow
-- skills/obsidian/discovering-vault-knowledge - For duplicate checking
+- skills/obsidian/vault-creating-obsidian-notes - For note creation workflow
+- skills/obsidian/vault-discovering-vault-knowledge - For duplicate checking
 
 **Called by:**
-- skills/knowledge-resources/maintaining-book-notes - When extracting models
-- skills/knowledge-resources/context-aware-reasoning - When documenting frameworks used
+- skills/knowledge-resources/vault-maintaining-book-notes - When extracting models
+- skills/knowledge-resources/think-context-aware-reasoning - When documenting frameworks used
 
 ## Remember
 

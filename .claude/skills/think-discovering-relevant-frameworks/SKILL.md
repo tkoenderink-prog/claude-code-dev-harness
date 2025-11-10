@@ -362,7 +362,7 @@ Read: [[Ray Dalio]] philosophy section
 - [[Ken Wilber]] - AQAL integral framework, comprehensive perspectives
 
 **Recommendation:**
-Start with [[Reinventing Organizations]] and [[AQAL]] for multi-perspective analysis (structure + culture + individual + system). This is chronic/strategic, use understanding-with-frameworks skill for synthesis.
+Start with [[Reinventing Organizations]] and [[AQAL]] for multi-perspective analysis (structure + culture + individual + system). This is chronic/strategic, use think-understanding-with-frameworks skill for synthesis.
 ```
 
 **Total time: 12 minutes, comprehensive discovery complete**
@@ -440,7 +440,7 @@ You discovered knowledge correctly when:
 
 **Recommendation:**
 Acute problem → Start with Extreme Ownership (take accountability).
-Strategic/chronic → Use understanding-with-frameworks for multi-model synthesis.
+Strategic/chronic → Use think-understanding-with-frameworks for multi-model synthesis.
 ```
 
 **Total time: 4 minutes, structured, actionable results**
@@ -465,15 +465,15 @@ Strategic/chronic → Use understanding-with-frameworks for multi-model synthesi
 ## Integration with Other Skills
 
 **Extends:**
-- skills/obsidian/discovering-vault-knowledge - Uses same multi-strategy search foundation
+- skills/obsidian/vault-discovering-vault-knowledge - Uses same multi-strategy search foundation
 
 **Calls:**
 - None (foundational search skill)
 
 **Called by:**
-- skills/knowledge-resources/solving-with-frameworks - Quick discovery for narrow mode
-- skills/knowledge-resources/understanding-with-frameworks - Comprehensive discovery for broad mode
-- skills/knowledge-resources/context-aware-reasoning - Orchestration of discovery
+- skills/knowledge-resources/think-solving-with-frameworks - Quick discovery for narrow mode
+- skills/knowledge-resources/think-understanding-with-frameworks - Comprehensive discovery for broad mode
+- skills/knowledge-resources/think-context-aware-reasoning - Orchestration of discovery
 
 ## Remember
 

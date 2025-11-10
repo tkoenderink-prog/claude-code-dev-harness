@@ -799,8 +799,8 @@ const users = await db.users.find().limit(limit);
 ## Integration with Other Skills
 
 **Use alongside:**
-- **systematic-debugging** - When investigating security vulnerabilities
-- **test-driven-development** - Write security tests first
+- **dev-systematic-debugging** - When investigating security vulnerabilities
+- **dev-test-driven-development** - Write security tests first
 - **api-design** - Secure API design patterns
 - **code-organization** - Separate security concerns
 

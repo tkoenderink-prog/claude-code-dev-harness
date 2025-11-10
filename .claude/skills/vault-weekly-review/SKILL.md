@@ -47,7 +47,7 @@ Vaults degrade without maintenance:
   ```
 
 - [ ] **Target: INBOX zero or <5 items**
-  - Process each item using skills/obsidian/creating-obsidian-notes
+  - Process each item using skills/obsidian/vault-creating-obsidian-notes
   - Quick wins first (2-minute items)
   - Complex items: Create placeholder in correct PARA location, add to project
 
@@ -114,7 +114,7 @@ Vaults degrade without maintenance:
 - [ ] **Check each for orphan status (no links)**
   - Read note
   - Count outgoing links: \[\[...\]\]
-  - If <3 → Add links using skills/obsidian/obsidian-linking-strategy
+  - If <3 → Add links using skills/obsidian/vault-obsidian-linking-strategy
 
 - [ ] **Find potential broken links**
   ```bash
@@ -190,7 +190,7 @@ Vaults degrade without maintenance:
 
 - [ ] **Check PARA placement accuracy (spot check)**
   - Read 3-5 random recent notes
-  - Verify classification correct per skills/obsidian/para-classification-decisions
+  - Verify classification correct per skills/obsidian/vault-para-classification-decisions
   - If misclassified → Move to correct location, update links
 
 **Success metric:** All recent notes have proper frontmatter, tags consistent
@@ -249,7 +249,7 @@ Vaults degrade without maintenance:
 |-------|-------|-----|
 | **Inbox always full** | Capturing faster than processing | Daily 5-min inbox triage + better templates |
 | **Projects stalling** | No weekly check-in | Add project review to daily note template |
-| **Orphan notes** | Creating without linking | Use skills/obsidian/creating-obsidian-notes strictly |
+| **Orphan notes** | Creating without linking | Use skills/obsidian/vault-creating-obsidian-notes strictly |
 | **Inconsistent metadata** | Skipping templates | Never create note without template |
 | **Can't find notes** | Poor linking, no MOCs | Create MOCs for topics with 7+ notes |
 | **Broken links** | Renaming without updating | Use Obsidian's rename feature (auto-updates links) |
@@ -283,9 +283,9 @@ If you catch yourself:
 ## Integration with Other Skills
 
 **Uses:**
-- skills/obsidian/creating-obsidian-notes (Processing inbox items)
-- skills/obsidian/obsidian-linking-strategy (Fixing orphans)
-- skills/obsidian/para-classification-decisions (Verifying placement)
+- skills/obsidian/vault-creating-obsidian-notes (Processing inbox items)
+- skills/obsidian/vault-obsidian-linking-strategy (Fixing orphans)
+- skills/obsidian/vault-para-classification-decisions (Verifying placement)
 
 **Called by:**
 - None (standalone maintenance ritual)

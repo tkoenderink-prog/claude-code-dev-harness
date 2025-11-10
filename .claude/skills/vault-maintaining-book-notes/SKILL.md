@@ -20,7 +20,7 @@ Consistent documentation enables:
 
 **Core principle:** Book notes are research artifacts, not reading logs. Focus on WHAT the book teaches, not personal experience reading it.
 
-**NEW in v2.0:** This skill now **automatically executes** the maintaining-influential-people-notes and maintaining-mental-model-notes skills, creating a fully integrated knowledge graph with all links in place. One workflow creates: book note → author profile → mental model notes → all bidirectional links.
+**NEW in v2.0:** This skill now **automatically executes** the vault-maintaining-influential-people-notes and vault-maintaining-mental-model-notes skills, creating a fully integrated knowledge graph with all links in place. One workflow creates: book note → author profile → mental model notes → all bidirectional links.
 
 ## When to Use
 
@@ -87,18 +87,18 @@ Consistent documentation enables:
 
 ### Phase 3a: AUTOMATIC Author Profile Creation
 
-**CRITICAL:** This phase automatically executes the maintaining-influential-people-notes skill.
+**CRITICAL:** This phase automatically executes the vault-maintaining-influential-people-notes skill.
 
-- [ ] **Read the maintaining-influential-people-notes skill**
+- [ ] **Read the vault-maintaining-influential-people-notes skill**
   ```bash
-  Read: .claude/skills/knowledge-resources/maintaining-influential-people-notes/SKILL.md
+  Read: .claude/skills/knowledge-resources/vault-maintaining-influential-people-notes/SKILL.md
   ```
 
 - [ ] **Announce skill usage**
   "I've read the Maintaining Influential People Notes skill and I'm using it to create [[Author Name]]'s profile."
 
 - [ ] **Execute complete author profile workflow:**
-  - Create TodoWrite todos for ALL checklist items from maintaining-influential-people-notes
+  - Create TodoWrite todos for ALL checklist items from vault-maintaining-influential-people-notes
   - Phase 1: Discovery & Verification (search for existing)
   - Phase 2: Biographical Research (facts, credentials, authority)
   - Phase 3: Philosophy Synthesis (3-5 paragraphs on HOW they think)
@@ -181,11 +181,11 @@ Consistent documentation enables:
 
 ## Phase 5a: AUTOMATIC Mental Model Extraction
 
-**CRITICAL:** This phase automatically executes the maintaining-mental-model-notes skill FOR EACH identified mental model.
+**CRITICAL:** This phase automatically executes the vault-maintaining-mental-model-notes skill FOR EACH identified mental model.
 
-- [ ] **Read the maintaining-mental-model-notes skill**
+- [ ] **Read the vault-maintaining-mental-model-notes skill**
   ```bash
-  Read: .claude/skills/knowledge-resources/maintaining-mental-model-notes/SKILL.md
+  Read: .claude/skills/knowledge-resources/vault-maintaining-mental-model-notes/SKILL.md
   ```
 
 - [ ] **For EACH mental model identified in Phase 5:**
@@ -209,7 +209,7 @@ Consistent documentation enables:
     "I've read the Maintaining Mental Model Notes skill and I'm using it to create [[Mental Model Name]]."
 
   - [ ] **Execute complete mental model workflow:**
-    - Create TodoWrite todos for ALL checklist items from maintaining-mental-model-notes
+    - Create TodoWrite todos for ALL checklist items from vault-maintaining-mental-model-notes
     - Phase 1: Verification (is this really a mental model?)
     - Phase 2: Research (web search, original sources, critics)
     - Phase 3: Content Creation (all 9 required sections)
@@ -304,7 +304,7 @@ tags: [book, domain-tags, author-name]
 | **No author profile** | Missing philosophical context | AUTOMATIC: Phase 3a creates it if missing |
 | **Didn't extract mental models** | Models trapped in book note | AUTOMATIC: Phase 5a extracts 3-5 standalone notes |
 | **Skipped automatic phases** | Disconnected knowledge graph | Execute Phase 3a and 5a FULLY before marking complete |
-| **Didn't read related skills** | Shallow execution | MUST read maintaining-influential-people-notes and maintaining-mental-model-notes |
+| **Didn't read related skills** | Shallow execution | MUST read vault-maintaining-influential-people-notes and vault-maintaining-mental-model-notes |
 | **Missing bidirectional links** | Orphaned notes | Phase 6 verifies ALL links: Book ↔ Author ↔ Models |
 | **Personal reading log style** | Not reference material | Focus on WHAT book teaches, not your experience |
 | **Only 1-2 paragraph summary** | Can't remember what book covered | 3-5 comprehensive paragraphs |
@@ -381,9 +381,9 @@ This book appears in the "[[Kindle Books on Amazon.nl account]]" collection unde
 
 If you're about to:
 - Create book note without searching → STOP. Check for duplicates first
-- Skip Phase 3a (author profile creation) → STOP. Execute maintaining-influential-people-notes skill
-- Skip Phase 5a (mental model extraction) → STOP. Execute maintaining-mental-model-notes skill for EACH model
-- Skip reading related skills → STOP. MUST read maintaining-influential-people-notes and maintaining-mental-model-notes
+- Skip Phase 3a (author profile creation) → STOP. Execute vault-maintaining-influential-people-notes skill
+- Skip Phase 5a (mental model extraction) → STOP. Execute vault-maintaining-mental-model-notes skill for EACH model
+- Skip reading related skills → STOP. MUST read vault-maintaining-influential-people-notes and vault-maintaining-mental-model-notes
 - Create shallow author profile → STOP. 3-5 paragraphs philosophy + balanced limitations required
 - Create shallow mental models → STOP. All 9 sections + 5+ limitations per model required
 - Skip Phase 6 (linking verification) → STOP. Verify ALL bidirectional links
@@ -427,10 +427,10 @@ If you're about to:
 **Phase 3-3a: Author Profile (AUTOMATIC)**
 - [ ] Checks [[Ray Dalio]] in Influential People
 - [ ] NOT found → Phase 3a triggered automatically
-- [ ] Reads maintaining-influential-people-notes skill
+- [ ] Reads vault-maintaining-influential-people-notes skill
 - [ ] Announces: "I've read the Maintaining Influential People Notes skill..."
 - [ ] Creates TodoWrite todos for complete author profile workflow
-- [ ] Executes all 6 phases of maintaining-influential-people-notes:
+- [ ] Executes all 6 phases of vault-maintaining-influential-people-notes:
   - Biographical research (hedge fund founder, $150B AUM, net worth)
   - Philosophy synthesis (3-5 paragraphs on principles-based thinking)
   - Critical analysis (balanced: strengths AND limitations)
@@ -447,10 +447,10 @@ If you're about to:
 **Phase 5-5a: Mental Model Extraction (AUTOMATIC)**
 - [ ] Identifies 5 extractable mental models: 5-Step Process, Pain+Reflection=Progress, Radical Transparency, Idea Meritocracy, Believability-Weighted Decisions
 - [ ] For EACH model → Phase 5a triggered automatically:
-  - Reads maintaining-mental-model-notes skill
+  - Reads vault-maintaining-mental-model-notes skill
   - Announces: "I've read the Maintaining Mental Model Notes skill and I'm using it to create [[5-Step Process]]"
   - Creates TodoWrite todos for complete mental model workflow
-  - Executes all 4 phases of maintaining-mental-model-notes:
+  - Executes all 4 phases of vault-maintaining-mental-model-notes:
     - Verification (is this a mental model? Yes)
     - Research (web search, original sources, critics)
     - Content Creation (all 9 sections, 5+ limitations, 3 examples)
@@ -487,8 +487,8 @@ If you're about to:
 | Rationalization | Counter Added to Skill (v2.0) |
 |-----------------|------------------------|
 | "I'll research it after reading" | "Research phase FIRST - informs what to pay attention to" |
-| "Mental models are obvious from summary" | "Phase 5a AUTOMATIC: Execute maintaining-mental-model-notes for EACH model" |
-| "Author isn't influential enough for profile" | "Phase 3a AUTOMATIC: Execute maintaining-influential-people-notes" |
+| "Mental models are obvious from summary" | "Phase 5a AUTOMATIC: Execute vault-maintaining-mental-model-notes for EACH model" |
+| "Author isn't influential enough for profile" | "Phase 3a AUTOMATIC: Execute vault-maintaining-influential-people-notes" |
 | "One paragraph summary is enough" | "3-5 paragraphs minimum - fast lookup needs detail" |
 | "I'll link to author later" | "Phase 6 AUTOMATIC: Verify ALL bidirectional links before complete" |
 | "I'll create mental models later" | "Phase 5a AUTOMATIC: Create ALL mental models before proceeding" |
@@ -508,7 +508,7 @@ You followed this skill correctly when:
 - ✅ "Key Mental Models Extracted" section lists all models
 
 **Author Profile (Phase 3a - AUTOMATIC):**
-- ✅ Read maintaining-influential-people-notes skill
+- ✅ Read vault-maintaining-influential-people-notes skill
 - ✅ Created/updated author profile with complete workflow
 - ✅ Philosophy section: 3-5 paragraphs (HOW they think, not biography)
 - ✅ Balanced table: Specific positives AND specific limitations
@@ -516,7 +516,7 @@ You followed this skill correctly when:
 - ✅ This book listed in author's "Books in Collection"
 
 **Mental Models (Phase 5a - AUTOMATIC):**
-- ✅ Read maintaining-mental-model-notes skill
+- ✅ Read vault-maintaining-mental-model-notes skill
 - ✅ Identified 3-5 extractable mental models
 - ✅ For EACH model: Created/updated with complete workflow
 - ✅ All 9 sections present per model
@@ -542,25 +542,25 @@ You followed this skill correctly when:
 ## Integration with Other Skills
 
 **Automatically Executes (v2.0):**
-- skills/knowledge-resources/maintaining-influential-people-notes - AUTOMATIC in Phase 3a
-- skills/knowledge-resources/maintaining-mental-model-notes - AUTOMATIC in Phase 5a (for EACH model)
+- skills/knowledge-resources/vault-maintaining-influential-people-notes - AUTOMATIC in Phase 3a
+- skills/knowledge-resources/vault-maintaining-mental-model-notes - AUTOMATIC in Phase 5a (for EACH model)
 
 **Calls:**
-- skills/obsidian/creating-obsidian-notes - For note creation
-- skills/obsidian/discovering-vault-knowledge - For duplicate checking
+- skills/obsidian/vault-creating-obsidian-notes - For note creation
+- skills/obsidian/vault-discovering-vault-knowledge - For duplicate checking
 
 **Called by:**
-- skills/knowledge-resources/discovering-relevant-frameworks - Finding books on topic
-- skills/knowledge-resources/context-aware-reasoning - Researching domain
+- skills/knowledge-resources/think-discovering-relevant-frameworks - Finding books on topic
+- skills/knowledge-resources/think-context-aware-reasoning - Researching domain
 
 **Workflow Chain:**
 ```
-maintaining-book-notes (this skill)
+vault-maintaining-book-notes (this skill)
   ↓
-  ├─→ Phase 3a: maintaining-influential-people-notes (AUTOMATIC)
+  ├─→ Phase 3a: vault-maintaining-influential-people-notes (AUTOMATIC)
   │   └─→ Creates/updates author profile with full workflow
   ↓
-  ├─→ Phase 5a: maintaining-mental-model-notes (AUTOMATIC, per model)
+  ├─→ Phase 5a: vault-maintaining-mental-model-notes (AUTOMATIC, per model)
   │   └─→ Creates 3-5 mental model notes with full workflow
   ↓
   └─→ Phase 6: Verifies ALL bidirectional links

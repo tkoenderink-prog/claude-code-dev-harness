@@ -224,8 +224,8 @@ If you catch yourself saying:
 ## Integration with Other Skills
 
 **Called by:**
-- skills/obsidian/creating-obsidian-notes (Phase 1 - Discovery)
-- skills/obsidian/obsidian-linking-strategy (Finding connection candidates)
+- skills/obsidian/vault-creating-obsidian-notes (Phase 1 - Discovery)
+- skills/obsidian/vault-obsidian-linking-strategy (Finding connection candidates)
 
 **Calls:**
 - None (foundational skill)

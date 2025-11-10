@@ -1,5 +1,5 @@
 ---
-name: test-strategy-design
+name: dev-test-strategy-design
 description: Use when working with test planning and strategy in your project - provides testing best practices and implementation patterns
 ---
 

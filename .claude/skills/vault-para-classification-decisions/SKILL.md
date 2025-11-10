@@ -218,7 +218,7 @@ If you catch yourself thinking:
 ## Integration with Other Skills
 
 **Called by:**
-- skills/obsidian/creating-obsidian-notes (Phase 2 - Classification)
+- skills/obsidian/vault-creating-obsidian-notes (Phase 2 - Classification)
 
 **Calls:**
 - None (uses flowchart logic only)

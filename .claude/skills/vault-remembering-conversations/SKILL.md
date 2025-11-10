@@ -29,13 +29,13 @@ Search archived conversations using semantic similarity or exact text matching.
 
 ## In-Session Use
 
-**Always use subagents** (50-100x context savings). See skills/using-skills for workflow.
+**Always use subagents** (50-100x context savings). See skills/cc-using-skills for workflow.
 
 **Manual/CLI use:** Direct search (below) for humans outside Claude Code sessions.
 
 ## Direct Search (Manual/CLI)
 
-**Tool:** `~/.claude/skills/remembering-conversations/tool/search-conversations`
+**Tool:** `~/.claude/skills/vault-remembering-conversations/tool/search-conversations`
 
 **Modes:**
 ```bash

@@ -17,7 +17,7 @@ languages: all
 **Goal:** Multi-perspective synthesis, identify tensions, counter cognitive biases, comprehensive insight
 **Use for:** Strategic planning, chronic issues, systemic problems, "help me understand this deeply"
 
-**NOT for:** Acute tactical problems, time-pressured decisions (use solving-with-frameworks instead)
+**NOT for:** Acute tactical problems, time-pressured decisions (use think-solving-with-frameworks instead)
 
 **Core principle:** Complex problems require multiple lenses. Synthesis reveals what single framework misses. Tensions are revealing. **Bias awareness prevents frameworks from becoming sophisticated rationalization.**
 
@@ -57,7 +57,7 @@ digraph understanding_mode_decision {
 - ✅ High stakes or long-term impact
 - ✅ "How does this work?" (not "What do I do?")
 
-### Use solving-with-frameworks Instead When (NARROW):
+### Use think-solving-with-frameworks Instead When (NARROW):
 
 **Acute problems:**
 - Missed deadline (one-time incident)
@@ -701,7 +701,7 @@ Paragraph 3: Synthesis - what emerges from multiple perspectives
 
 ---
 
-*Generated using understanding-with-frameworks v2.1 with parallel subagent optimization and cognitive bias awareness*
+*Generated using think-understanding-with-frameworks v2.1 with parallel subagent optimization and cognitive bias awareness*
 ```
 
 - [ ] **Link from source note (if applicable):**
@@ -907,7 +907,7 @@ All five frameworks converge on three insights: (1) centralized approval committ
 
 | Mistake | Impact | Fix |
 |---------|--------|-----|
-| **Used broad mode for acute problem** | Overthinking simple issue, delayed action | Check: Time pressure? Single action? → Use solving-with-frameworks |
+| **Used broad mode for acute problem** | Overthinking simple issue, delayed action | Check: Time pressure? Single action? → Use think-solving-with-frameworks |
 | **Read only 1-2 frameworks** | Not synthesis, just application | Read 3-5 DIVERSE frameworks minimum |
 | **Skipped limitations sections** | Uncritical application, missed blind spots | Read limitations as carefully as strengths |
 | **Ignored tensions** | Missed key insights, oversimplified | Tensions reveal trade-offs - analyze explicitly, don't resolve away |
@@ -918,10 +918,10 @@ All five frameworks converge on three insights: (1) centralized approval committ
 ## Red Flags - Switch to Narrow Mode
 
 If you notice during broad mode:
-- "Actually need quick answer, don't have 20 minutes" → solving-with-frameworks
-- "This is a specific decision, not strategic understanding" → solving-with-frameworks
-- "Acute problem not chronic pattern" → solving-with-frameworks
-- "One framework is obviously perfect fit, others aren't adding value" → solving-with-frameworks
+- "Actually need quick answer, don't have 20 minutes" → think-solving-with-frameworks
+- "This is a specific decision, not strategic understanding" → think-solving-with-frameworks
+- "Acute problem not chronic pattern" → think-solving-with-frameworks
+- "One framework is obviously perfect fit, others aren't adding value" → think-solving-with-frameworks
 
 **All mean: Wrong mode. Use targeted narrow application.**
 
@@ -1056,20 +1056,20 @@ You know bias awareness WORKED when:
 ## Integration with Other Skills
 
 **Calls:**
-- skills/knowledge-resources/discovering-relevant-frameworks - Comprehensive discovery (all 4 entry points)
+- skills/knowledge-resources/think-discovering-relevant-frameworks - Comprehensive discovery (all 4 entry points)
 - **NEW v2.1:** Integrates with cognitive-biases knowledge base:
   - [[MoC Cognitive Biases]] - Master index with 191 biases
   - Domain-specific curated lists (hiring, strategic, medical, etc.)
-  - Can call skills/cognitive-biases/domain-specific-application for automated bias identification
-  - Can call skills/cognitive-biases/mitigation-strategies for debiasing techniques
+  - Can call skills/cognitive-biases/think-domain-specific-application for automated bias identification
+  - Can call skills/cognitive-biases/think-mitigation-strategies for debiasing techniques
 
 **Called by:**
-- skills/knowledge-resources/context-aware-reasoning - Orchestration determines narrow vs broad mode
+- skills/knowledge-resources/think-context-aware-reasoning - Orchestration determines narrow vs broad mode
 
 **Related:**
-- skills/knowledge-resources/solving-with-frameworks - Narrow mode for acute problems
-- skills/cognitive-biases/quick-recognition - 2-min bias diagnostic
-- skills/cognitive-biases/pre-decision-checklist - Systematic bias check for major decisions
+- skills/knowledge-resources/think-solving-with-frameworks - Narrow mode for acute problems
+- skills/cognitive-biases/think-quick-recognition - 2-min bias diagnostic
+- skills/cognitive-biases/think-pre-decision-checklist - Systematic bias check for major decisions
 
 ## Remember
 

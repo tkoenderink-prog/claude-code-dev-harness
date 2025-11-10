@@ -219,7 +219,7 @@ app.post('/delete-account', csrfProtection, (req, res) => {
 response.set_cookie('session', value, samesite='Strict', secure=True, httponly=True)
 ```
 
-**Important:** SameSite cookies provide defense-in-depth but don't replace CSRF tokens.
+**Important:** SameSite cookies provide dev-defense-in-depth but don't replace CSRF tokens.
 
 ## 4. Command Injection
 

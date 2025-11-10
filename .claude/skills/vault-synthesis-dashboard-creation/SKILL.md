@@ -502,8 +502,8 @@ Every dashboard should answer:
 ## Integration with Other Skills
 
 **Uses:**
-- skills/obsidian/obsidian-linking-strategy (Linking dashboard to content)
-- skills/obsidian/creating-obsidian-notes (Dashboard creation workflow)
+- skills/obsidian/vault-obsidian-linking-strategy (Linking dashboard to content)
+- skills/obsidian/vault-creating-obsidian-notes (Dashboard creation workflow)
 
 **Called by:**
 - skills/obsidian/vault-weekly-review (Dashboard updates Phase 4)

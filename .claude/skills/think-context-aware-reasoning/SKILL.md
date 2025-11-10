@@ -58,9 +58,9 @@ digraph context_aware_flow {
     is_acute [label="Acute (hours/days)\nOR chronic (ongoing)?", shape=diamond];
 
     use_existing [label="Use existing knowledge\nDocument if novel", shape=box];
-    discover [label="discovering-relevant-frameworks", shape=box, style=filled, fillcolor=lightblue];
-    solving [label="solving-with-frameworks\n(NARROW MODE)", shape=box, style=filled, fillcolor=lightgreen];
-    understanding [label="understanding-with-frameworks\n(BROAD MODE)", shape=box, style=filled, fillcolor=lightcoral];
+    discover [label="think-discovering-relevant-frameworks", shape=box, style=filled, fillcolor=lightblue];
+    solving [label="think-solving-with-frameworks\n(NARROW MODE)", shape=box, style=filled, fillcolor=lightgreen];
+    understanding [label="think-understanding-with-frameworks\n(BROAD MODE)", shape=box, style=filled, fillcolor=lightcoral];
     action [label="Take Action", shape=box, style=filled, fillcolor=lightgreen];
     synthesis [label="Synthesize → Plan → Execute", shape=box, style=filled, fillcolor=lightcoral];
 
@@ -91,10 +91,10 @@ digraph context_aware_flow {
 2. **Assess mode:** API issue in production (acute) OR recurring pattern (chronic)?
    - If first time → Acute
    - If recurring → Chronic
-3. **Query vault:** discovering-relevant-frameworks("debugging", "systematic", "root cause")
+3. **Query vault:** think-discovering-relevant-frameworks("debugging", "systematic", "root cause")
 4. **Apply framework:**
-   - Acute → solving-with-frameworks (find ONE debugging model, take action)
-   - Chronic → understanding-with-frameworks (synthesize multiple perspectives)
+   - Acute → think-solving-with-frameworks (find ONE debugging model, take action)
+   - Chronic → think-understanding-with-frameworks (synthesize multiple perspectives)
 5. **Integrate:** Use framework + technical debugging skills
 6. **Execute:** Apply to API issue
 
@@ -122,8 +122,8 @@ Applying Root Cause Tracing:
 
 1. **Recognize trigger:** Strategic planning → Check vault comprehensively
 2. **Assess mode:** Strategic (not acute) → Broad mode
-3. **Query vault:** discovering-relevant-frameworks("knowledge management", "organizational", "information", "second brain")
-4. **Apply frameworks:** understanding-with-frameworks → Multi-perspective synthesis
+3. **Query vault:** think-discovering-relevant-frameworks("knowledge management", "organizational", "information", "second brain")
+4. **Apply frameworks:** think-understanding-with-frameworks → Multi-perspective synthesis
 5. **Integrate:** Plan incorporates multiple frameworks
 6. **Execute:** Create implementation plan
 
@@ -147,7 +147,7 @@ This is strategic planning - let me comprehensively explore knowledge management
 
 **Multi-Framework Synthesis:**
 
-[Following understanding-with-frameworks skill]
+[Following think-understanding-with-frameworks skill]
 
 PARA provides folder structure (proven in current vault). GTD provides capture workflow (inbox processing). Zettelkasten provides linking strategy (bidirectional connections enable emergence). Progressive Summarization provides compression (layered: highlights → summaries → remixes). Second Brain provides overall philosophy (extend cognition, not just storage).
 
@@ -172,7 +172,7 @@ PARA provides folder structure (proven in current vault). GTD provides capture w
 1. **Recognize:** Implementation task → Check vault + technical knowledge
 2. **Assess:** Specific implementation (acute) BUT also architectural (strategic)
    - Dual nature: Quick action + strategic design
-3. **Query vault:** discovering-relevant-frameworks("security", "systems", "defense")
+3. **Query vault:** think-discovering-relevant-frameworks("security", "systems", "defense")
 4. **Also check:** Technical skills (may have auth patterns skill)
 5. **Apply:** Mental models (high-level) + technical patterns (specific)
 6. **Integrate:** Mental model guides architecture, technical guides implementation
@@ -209,14 +209,14 @@ Let me check vault for both strategic frameworks and technical patterns.
 
 | Situation | Acute or Chronic? | Discovery Mode | Application Mode | Skill Used |
 |-----------|------------------|----------------|------------------|-----------|
-| Missed deadline | Acute | Quick (MoC only) | Narrow (1 framework) | solving-with-frameworks |
-| Team underperforms (ongoing) | Chronic | Comprehensive (all 4 entry points) | Broad (3-5 frameworks) | understanding-with-frameworks |
-| API bug in production | Acute | Quick | Narrow | solving-with-frameworks |
-| Designing architecture | Chronic/Strategic | Comprehensive | Broad | understanding-with-frameworks |
-| "How do I handle this conflict?" | Acute | Quick | Narrow | solving-with-frameworks |
-| "How do I improve our culture?" | Chronic | Comprehensive | Broad | understanding-with-frameworks |
-| Specific code review comment | Acute | Quick | Narrow | solving-with-frameworks |
-| Career direction decision | Chronic/Strategic | Comprehensive | Broad | understanding-with-frameworks |
+| Missed deadline | Acute | Quick (MoC only) | Narrow (1 framework) | think-solving-with-frameworks |
+| Team underperforms (ongoing) | Chronic | Comprehensive (all 4 entry points) | Broad (3-5 frameworks) | think-understanding-with-frameworks |
+| API bug in production | Acute | Quick | Narrow | think-solving-with-frameworks |
+| Designing architecture | Chronic/Strategic | Comprehensive | Broad | think-understanding-with-frameworks |
+| "How do I handle this conflict?" | Acute | Quick | Narrow | think-solving-with-frameworks |
+| "How do I improve our culture?" | Chronic | Comprehensive | Broad | think-understanding-with-frameworks |
+| Specific code review comment | Acute | Quick | Narrow | think-solving-with-frameworks |
+| Career direction decision | Chronic/Strategic | Comprehensive | Broad | think-understanding-with-frameworks |
 
 ## Orchestration Workflow
 
@@ -233,11 +233,11 @@ Let me check vault for both strategic frameworks and technical patterns.
   - Single action OR understanding needed?
 
 - [ ] **Vault query** (3 min)
-  - Use discovering-relevant-frameworks (quick mode)
+  - Use think-discovering-relevant-frameworks (quick mode)
   - MoC scan only for acute
 
 - [ ] **Framework application** (3 min)
-  - Use solving-with-frameworks (narrow mode)
+  - Use think-solving-with-frameworks (narrow mode)
   - ONE framework, quick action
 
 - [ ] **Integration** (1 min)
@@ -256,11 +256,11 @@ Let me check vault for both strategic frameworks and technical patterns.
   - Confirmed: Chronic, multi-dimensional, no time pressure
 
 - [ ] **Vault query** (5 min)
-  - Use discovering-relevant-frameworks (comprehensive mode)
+  - Use think-discovering-relevant-frameworks (comprehensive mode)
   - All 4 entry points (MoC, Books, People, Cross-ref)
 
 - [ ] **Framework application** (18 min)
-  - Use understanding-with-frameworks (broad mode)
+  - Use think-understanding-with-frameworks (broad mode)
   - 3-5 diverse frameworks, synthesis, tensions
 
 - [ ] **Integration** (2 min)
@@ -359,7 +359,7 @@ Core principle: Take complete ownership of team outcomes, no blame.
 
 ---
 
-**Note:** This is narrow mode (quick action). If team underperformance is chronic/ongoing pattern, I can provide comprehensive multi-framework analysis using understanding-with-frameworks. Would you like deep analysis?
+**Note:** This is narrow mode (quick action). If team underperformance is chronic/ongoing pattern, I can provide comprehensive multi-framework analysis using think-understanding-with-frameworks. Would you like deep analysis?
 ```
 
 ### With Skill (GREEN) - Strategic Problem
@@ -369,7 +369,7 @@ Core principle: Take complete ownership of team outcomes, no blame.
 **Orchestration:**
 
 - ✅ Trigger: Chronic issue, strategic understanding needed
-- ✅ Mode: Broad (understanding-with-frameworks)
+- ✅ Mode: Broad (think-understanding-with-frameworks)
 - ✅ Query: Comprehensive (all 4 entry points)
 
 **Comprehensive Response:**
@@ -392,7 +392,7 @@ This is a chronic systemic issue - let me explore comprehensively.
 
 **Multi-Framework Synthesis (18 min comprehensive analysis):**
 
-[Following understanding-with-frameworks skill]
+[Following think-understanding-with-frameworks skill]
 
 **AQAL reveals** this isn't just one dimension:
 - I (individual): Are people motivated? Skills matched to work?
@@ -456,14 +456,14 @@ This is a chronic systemic issue - let me explore comprehensively.
 ## Integration with Other Skills
 
 **Orchestrates (calls in sequence):**
-1. skills/knowledge-resources/discovering-relevant-frameworks - Find frameworks
-2. skills/knowledge-resources/solving-with-frameworks - Narrow mode (OR)
-3. skills/knowledge-resources/understanding-with-frameworks - Broad mode
+1. think-discovering-relevant-frameworks - Find frameworks
+2. think-solving-with-frameworks - Narrow mode (OR)
+3. think-understanding-with-frameworks - Broad mode
 
 **Integrates with:**
-- skills/collaboration/brainstorming - Framework-informed ideation
-- skills/debugging/systematic-debugging - Mental models + technical debugging
-- skills/testing/test-driven-development - Framework-guided development
+- think-brainstorming - Framework-informed ideation
+- dev-systematic-debugging - Mental models + technical debugging
+- dev-test-driven-development - Framework-guided development
 
 **This is the ENTRY POINT that makes the whole knowledge system proactive.**
 

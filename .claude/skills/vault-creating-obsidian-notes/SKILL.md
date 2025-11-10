@@ -87,7 +87,7 @@ If you write a note before searching the vault, delete it and start over.
 
 ### Phase 2: PARA Classification
 
-Use skills/obsidian/para-classification-decisions for ambiguous cases.
+Use skills/obsidian/vault-para-classification-decisions for ambiguous cases.
 
 **Quick classification:**
 ```dot
@@ -260,9 +260,9 @@ Can't check all boxes? Don't create the note yet.
 ## Integration with Other Skills
 
 This skill calls:
-- skills/obsidian/para-classification-decisions - When classification ambiguous (Phase 2)
-- skills/obsidian/discovering-vault-knowledge - For comprehensive search (Phase 1)
-- skills/obsidian/obsidian-linking-strategy - For linking decisions (Phase 5)
+- skills/obsidian/vault-para-classification-decisions - When classification ambiguous (Phase 2)
+- skills/obsidian/vault-discovering-vault-knowledge - For comprehensive search (Phase 1)
+- skills/obsidian/vault-obsidian-linking-strategy - For linking decisions (Phase 5)
 
 ## Success Criteria
 

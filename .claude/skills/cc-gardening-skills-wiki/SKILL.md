@@ -31,15 +31,15 @@ The skills wiki needs regular maintenance to stay healthy: links break, skills g
 
 ```bash
 # Run all checks
-~/.claude/skills/meta/gardening-skills-wiki/garden.sh
+~/.claude/skills/meta/cc-gardening-skills-wiki/garden.sh
 
 # Or run specific checks
-~/.claude/skills/meta/gardening-skills-wiki/check-links.sh
-~/.claude/skills/meta/gardening-skills-wiki/check-naming.sh
-~/.claude/skills/meta/gardening-skills-wiki/check-index-coverage.sh
+~/.claude/skills/meta/cc-gardening-skills-wiki/check-links.sh
+~/.claude/skills/meta/cc-gardening-skills-wiki/check-naming.sh
+~/.claude/skills/meta/cc-gardening-skills-wiki/check-index-coverage.sh
 
 # Analyze search gaps (what skills are missing)
-~/.claude/skills/meta/gardening-skills-wiki/analyze-search-gaps.sh
+~/.claude/skills/meta/cc-gardening-skills-wiki/analyze-search-gaps.sh
 ```
 
 The master script runs all checks and provides a health report.
@@ -50,14 +50,14 @@ The master script runs all checks and provides a health report.
 
 **Checks:**
 - Backtick-wrapped `@` links - backticks disable resolution
-- Relative paths like skills/ or skills/gardening-skills-wiki/~/ - should use skills/ absolute paths
+- Relative paths like skills/ or skills/cc-gardening-skills-wiki/~/ - should use skills/ absolute paths
 - All `skills/` references resolve to existing files
 - Skills referenced in INDEX files exist
 - Orphaned skills (not in any INDEX)
 
 **Fixes:**
 - Remove backticks from @ references
-- Convert skills/ and skills/gardening-skills-wiki/~/ relative paths to skills/ absolute paths
+- Convert skills/ and skills/cc-gardening-skills-wiki/~/ relative paths to skills/ absolute paths
 - Update broken skills/ references to correct paths
 - Add orphaned skills to their category INDEX
 - Remove references to deleted skills
@@ -94,8 +94,8 @@ The master script runs all checks and provides a health report.
 ### Broken Links
 
 ```
-❌ BROKEN: skills/debugging/root-cause-tracing
-   Target: /path/to/skills/debugging/root-cause-tracing/SKILL.md
+❌ BROKEN: dev-root-cause-tracing
+   Target: /path/to/skills/dev-root-cause-tracing/SKILL.md
 ```
 
 **Fix:** Update the reference path - skill might have moved or been renamed.
@@ -109,13 +109,13 @@ The master script runs all checks and provides a health report.
 **Fix:** Add to the category INDEX:
 
 ```markdown
-- skills/gardening-skills-wiki/test-invariants - Description of skill
+- skills/cc-gardening-skills-wiki/test-invariants - Description of skill
 ```
 
 ### Backtick-Wrapped Links
 
 ```
-❌ BACKTICKED: skills/testing/condition-based-waiting on line 31
+❌ BACKTICKED: cc-condition-based-waiting on line 31
    File: getting-started/SKILL.md
    Fix: Remove backticks - use bare @ reference
 ```
@@ -124,27 +124,27 @@ The master script runs all checks and provides a health report.
 
 ```markdown
 # ❌ Bad - backticks disable link resolution
-`skills/testing/condition-based-waiting`
+`cc-condition-based-waiting`
 
 # ✅ Good - bare @ reference
-skills/testing/condition-based-waiting
+cc-condition-based-waiting
 ```
 
 ### Relative Path Links
 
 ```
-❌ RELATIVE: skills/testing in coding/SKILL.md
-   Fix: Use skills/ absolute path instead
+❌ RELATIVE: cc-condition-based-waiting in coding/SKILL.md
+   Fix: Use full skill name instead
 ```
 
-**Fix:** Convert to absolute path:
+**Fix:** Convert to full skill name:
 
 ```markdown
-# ❌ Bad - relative paths are brittle
-skills/testing/condition-based-waiting
+# ❌ Bad - incomplete reference
+cc-condition-based-waiting
 
-# ✅ Good - absolute skills/ path
-skills/testing/condition-based-waiting
+# ✅ Good - full prefixed skill name
+cc-condition-based-waiting
 ```
 
 ### Naming Issues
@@ -164,7 +164,7 @@ mv TestingPatterns testing-patterns
 ### Missing from INDEX
 
 ```
-❌ NOT INDEXED: condition-based-waiting/SKILL.md
+❌ NOT INDEXED: cc-condition-based-waiting/SKILL.md
 ```
 
 **Fix:** Add to `testing/INDEX.md`:
@@ -172,7 +172,7 @@ mv TestingPatterns testing-patterns
 ```markdown
 ## Available Skills
 
-- skills/gardening-skills-wiki/condition-based-waiting - Replace timeouts with condition polling
+- skills/cc-gardening-skills-wiki/cc-condition-based-waiting - Replace timeouts with condition polling
 ```
 
 ### Empty Directories
@@ -222,7 +222,7 @@ vim ~/.claude/skills/category/new-skill/SKILL.md
 vim ~/.claude/skills/category/INDEX.md
 
 # 3. Run health check
-~/.claude/skills/meta/gardening-skills-wiki/garden.sh
+~/.claude/skills/meta/cc-gardening-skills-wiki/garden.sh
 
 # 4. Fix any issues reported
 ```
@@ -234,10 +234,10 @@ vim ~/.claude/skills/category/INDEX.md
 mv ~/.claude/skills/old-category/skill ~/.claude/skills/new-category/
 
 # 2. Update all references (grep for old paths)
-grep -r "skills/gardening-skills-wiki/old-category/skill" ~/.claude/skills/
+grep -r "skills/cc-gardening-skills-wiki/old-category/skill" ~/.claude/skills/
 
 # 3. Run health check
-~/.claude/skills/meta/gardening-skills-wiki/garden.sh
+~/.claude/skills/meta/cc-gardening-skills-wiki/garden.sh
 
 # 4. Fix broken links
 ```
@@ -246,7 +246,7 @@ grep -r "skills/gardening-skills-wiki/old-category/skill" ~/.claude/skills/
 
 ```bash
 # Monthly: Run full health check
-~/.claude/skills/meta/gardening-skills-wiki/garden.sh
+~/.claude/skills/meta/cc-gardening-skills-wiki/garden.sh
 
 # Review and fix:
 # - ❌ errors (broken links, missing skills)
@@ -261,7 +261,7 @@ Runs all health checks and provides comprehensive report.
 
 **Usage:**
 ```bash
-~/.claude/skills/meta/gardening-skills-wiki/garden.sh [skills_dir]
+~/.claude/skills/meta/cc-gardening-skills-wiki/garden.sh [skills_dir]
 ```
 
 ### `check-links.sh`
@@ -270,7 +270,7 @@ Validates all `@` references and cross-links.
 
 **Checks:**
 - Backtick-wrapped `@` links (disables resolution)
-- Relative paths (`skills/` or `skills/gardening-skills-wiki/~/`) - should be `skills/`
+- Relative paths (`skills/` or `skills/cc-gardening-skills-wiki/~/`) - should be `skills/`
 - `@` reference resolution to existing files
 - Skills in INDEX files exist
 - Orphaned skills detection
@@ -318,7 +318,7 @@ Validates INDEX completeness.
 **Before committing skill changes:**
 
 ```bash
-~/.claude/skills/meta/gardening-skills-wiki/garden.sh
+~/.claude/skills/meta/cc-gardening-skills-wiki/garden.sh
 # Fix all ❌ errors
 # Consider fixing ⚠️  warnings
 git add .
@@ -328,13 +328,13 @@ git commit -m "Add/update skills"
 **When links feel suspicious:**
 
 ```bash
-~/.claude/skills/meta/gardening-skills-wiki/check-links.sh
+~/.claude/skills/meta/cc-gardening-skills-wiki/check-links.sh
 ```
 
 **When INDEX seems incomplete:**
 
 ```bash
-~/.claude/skills/meta/gardening-skills-wiki/check-index-coverage.sh
+~/.claude/skills/meta/cc-gardening-skills-wiki/check-index-coverage.sh
 ```
 
 ## Common Rationalizations

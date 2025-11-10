@@ -281,7 +281,7 @@ This evaluation framework is based on research from 40+ sources including:
 
 ### Example 1: High-Quality Skill (Score: 92/100)
 
-**Skill:** `test-driven-development`
+**Skill:** `dev-test-driven-development`
 **Scores:** A:19, B:18, C:19, D:18, E:18
 
 **Why High Quality:**
@@ -364,14 +364,14 @@ This evaluation framework is based on research from 40+ sources including:
 To ensure consistent scoring across evaluations:
 
 ### Functional Correctness (Dimension A)
-- **20 points:** Comprehensive framework like `test-driven-development` (365 lines)
+- **20 points:** Comprehensive framework like `dev-test-driven-development` (365 lines)
 - **15 points:** Solid guidance like `code-organization` (100-200 lines)
 - **10 points:** Basic coverage like medium-quality skill templates
 - **5 points:** Minimal guidance, major gaps
 - **0 points:** No useful content
 
 ### Clarity & Usability (Dimension B)
-- **20 points:** `systematic-debugging` - crystal clear structure, perfect examples
+- **20 points:** `dev-systematic-debugging` - crystal clear structure, perfect examples
 - **15 points:** Clear instructions, good examples, well-structured
 - **10 points:** Understandable but could be clearer
 - **5 points:** Confusing, hard to follow
@@ -503,9 +503,9 @@ Use evaluation scores as one input to decision-making, not the only input.
 ## See Also
 
 Related skills:
-- `writing-skills` - How to create high-quality skills
-- `gardening-skills-wiki` - Maintaining skill library health
-- `systematic-debugging` - Example of high-quality skill structure
+- `cc-writing-skills` - How to create high-quality skills
+- `cc-gardening-skills-wiki` - Maintaining skill library health
+- `dev-systematic-debugging` - Example of high-quality skill structure
 
 Related documentation:
 - `.claude-state/skill-systems-research-report.md` - Full research findings

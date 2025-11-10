@@ -23,8 +23,8 @@ Use this skill when you need to:
 
 **Do NOT use when:**
 - Searching across entire vault (use vault-wide search instead)
-- Looking for non-journal content (use discovering-vault-knowledge skill)
-- Creating new journal entries (use creating-obsidian-notes skill)
+- Looking for non-journal content (use vault-discovering-vault-knowledge skill)
+- Creating new journal entries (use vault-creating-obsidian-notes skill)
 
 ## Journal Structure
 

@@ -183,17 +183,21 @@ metrics:
 
 ## Skill Library Organization
 
-### Skill Categories (100 total skills)
-1. **development/** - Core coding skills
-2. **testing/** - Test creation and execution
-3. **architecture/** - Design and structure
-4. **debugging/** - Issue resolution
-5. **refactoring/** - Code improvement
-6. **api/** - API design and integration
-7. **database/** - Data modeling and queries
-8. **deployment/** - CI/CD and releases
-9. **security/** - Security practices
-10. **documentation/** - Docs and comments
+### Skill Categories (66 elite skills)
+
+The library uses a **prefix-based categorization** system for clear organization:
+
+1. **dev-*** (15 skills) - Software development: TDD, debugging, security, architecture, databases
+2. **think-*** (19 skills) - Thinking & planning: problem-solving, mental models, cognitive biases
+3. **cc-*** (15 skills) - Claude Code meta-skills: skill creation, hook debugging, system maintenance
+4. **vault-*** (12 skills) - Knowledge management: Obsidian workflows, PARA method, note-taking
+5. **physical-*** (5 skills) - Physical training: workout design, strength programs, conditioning
+
+### Skill Structure
+All skills follow the official Claude Code format:
+- Location: `.claude/skills/skill-name/SKILL.md`
+- Naming: Kebab-case with category prefix (e.g., `dev-test-driven-development`)
+- Flat directory structure (no nested categories)
 
 ### Skill Metadata Structure
 ```yaml
@@ -207,7 +211,7 @@ dependencies: [other-skills]
 
 ### Skill Selection Algorithm
 1. Parse user request for keywords
-2. Match against skill triggers
+2. Match against skill triggers and prefixes
 3. Check skill dependencies
 4. Estimate time requirements
 5. Return skill chain for execution
@@ -216,58 +220,61 @@ dependencies: [other-skills]
 
 This project includes a comprehensive local skills repository in `.claude/skills/`:
 
-**Total Skills:** 135 active skills
-- **Converted Skills:** 77 (template skills from old categorized structure)
-- **User Skills:** 38 (personal custom skills)
-- **Development Skills:** 19 (core development workflows)
-- **Local Skills:** 1 (fixing-claude-code-hooks)
+**Total Skills:** 66 elite skills (100% high-quality, 0% templates)
+
+**Quality Metrics:**
+- Average Score: 85+/100
+- Exemplary (90-100): 8 skills (12%)
+- Strong (80-89): 47 skills (71%)
+- Good/Adequate: 11 skills (17%)
 
 **Structure:** Official Claude Code format - flat directory with `skill-name/SKILL.md`
 
+**Prefix-Based Organization:**
+All skills use prefix categorization for easy discovery and clear scope boundaries.
+
+| Prefix | Category | Count | Examples |
+|--------|----------|-------|----------|
+| `dev-` | Software Development | 15 | dev-test-driven-development, dev-security-fundamentals |
+| `think-` | Thinking & Planning | 19 | think-solving-with-frameworks, think-when-stuck |
+| `cc-` | Claude Code Meta | 15 | cc-writing-skills, cc-fixing-claude-code-hooks |
+| `vault-` | Obsidian Vault/PKM | 12 | vault-creating-obsidian-notes, vault-maintaining-book-notes |
+| `physical-` | Physical Training | 5 | physical-strength-workout-design |
+
 **Usage:**
 ```
-Skill(skill-name)
+Skill(skill-name)  # e.g., Skill(dev-test-driven-development)
 ```
 
-**Categories:**
-- Architecture (10) - System design patterns
-- Database (10) - DB optimization & patterns
-- Debugging (10) - Debugging techniques
-- Deployment (7) - CI/CD strategies
-- Development (10) - Core dev practices
-- Documentation (10) - Technical writing
-- Security (10) - Security practices
-- Testing (10) - Testing strategies
-- Meta (4) - Skills about skills
-- Development Workflows (19) - TDD, debugging, code review
-- Obsidian (8) - Knowledge management
-- Physical Training (5) - Workout programs
-- Knowledge Resources (7) - Mental models
-- Cognitive Biases (5) - Bias awareness
-- Problem Solving (6) - Problem-solving
-- Other (7) - Specialized skills
+**Documentation:**
+- See `TRANSFORMATION-SUMMARY.md` for complete transformation details
+- See `.claude-state/COMPREHENSIVE-SKILLS-ANALYSIS.md` for detailed analysis
 
-**Synchronization:** Update from global sources:
-```bash
-./sync-skills.sh
-```
+**Gold Standard Skills (90-100 score):**
+- `think-quick-recognition` (91) - Cognitive bias diagnostic
+- `dev-test-driven-development` (91) - TDD with "Iron Law"
+- `think-solving-with-frameworks` (91) - Framework action mode
+- `dev-systematic-debugging` (90) - Four-phase debugging
+- `cc-writing-skills` (90) - TDD for skills
+- `think-mitigation-strategies` (90) - Debiasing techniques
+- `vault-maintaining-book-notes` (89) - Knowledge integration
+- `think-context-aware-reasoning` (86) - Meta-framework
 
-**Health Checks:** Validate structure:
-```bash
-./check-skills-health.sh
-```
+**Key Development Skills:**
+- `dev-test-driven-development` - RED-GREEN-REFACTOR cycle with Iron Law
+- `dev-systematic-debugging` - Four-phase debugging framework
+- `dev-security-fundamentals` - OWASP Top 10 2024 coverage
+- `dev-secrets-management` - Cloud secrets with zero-downtime rotation
+- `dev-secure-coding` - XSS, SQL injection, CSRF protection
+- `dev-system-design` - Architecture patterns with real examples
+- `dev-scalability-patterns` - Load balancing, caching, auto-scaling
+- `dev-query-optimization` - Index strategies, EXPLAIN plans
+- `dev-integration-tests` - Docker, Testcontainers, CI/CD
 
-**Documentation:** See `.claude/skills/README.md` and `skills/README.md` for complete catalogs.
-
-**Key Skills for Development:**
-- `systematic-debugging` - Four-phase debugging framework
-- `test-driven-development` - RED-GREEN-REFACTOR cycle
-- `writing-skills` - TDD approach to creating skills
-- `api-design` - REST/GraphQL API design
-- `tdd-implementation` - TDD practices
-- `fixing-claude-code-hooks` - Diagnose hook errors
-- `root-cause-analysis` - RCA methodology
-- `security-testing` - Security test strategies
+**Key Meta Skills:**
+- `cc-writing-skills` - TDD approach to creating skills
+- `cc-fixing-claude-code-hooks` - Diagnose hook errors
+- `cc-skill-evaluator` - 0-100 scoring framework
 
 ## Workflow Patterns
 

@@ -1,5 +1,5 @@
 ---
-name: scalability-patterns
+name: dev-scalability-patterns
 description: Use when working with scaling strategies in your project - provides architecture best practices and implementation patterns
 ---
 
@@ -801,7 +801,7 @@ scenarios = {
 
 ## Related Skills
 
-- `system-design` - High-level architecture patterns
+- `dev-system-design` - High-level architecture patterns
 - `database-design` - Schema optimization for scale
 - `performance-optimization` - Code-level optimizations
 - `cloud-architecture` - Cloud-native scaling patterns

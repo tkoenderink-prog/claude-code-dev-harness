@@ -17,7 +17,7 @@ languages: all
 **Goal:** Find THE right framework, apply it, take action, log result
 **Use for:** Acute problems, tactical decisions, "what do I do right now?"
 
-**NOT for:** Strategic planning, chronic issues, deep understanding (use understanding-with-frameworks instead)
+**NOT for:** Strategic planning, chronic issues, deep understanding (use think-understanding-with-frameworks instead)
 
 **Core principle:** Speed over comprehensiveness. Good enough framework applied quickly beats perfect framework applied late.
 
@@ -56,7 +56,7 @@ digraph solving_mode_decision {
 - ✅ Single dimension (not multi-faceted)
 - ✅ "What do I DO?" (not "How does this work?")
 
-### Use understanding-with-frameworks Instead When (BROAD):
+### Use think-understanding-with-frameworks Instead When (BROAD):
 
 **Chronic/strategic:**
 - Organization struggling with innovation (systemic)
@@ -154,7 +154,7 @@ digraph solving_mode_decision {
 - [ ] **Decision: Does this apply?**
   - ✅ Yes → Apply (Phase 4)
   - ❌ No → Read second candidate (only if time allows)
-  - ❌ Still no → Either (a) escalate to understanding-with-frameworks OR (b) proceed without framework
+  - ❌ Still no → Either (a) escalate to think-understanding-with-frameworks OR (b) proceed without framework
 
 **Time check: 60 seconds. Trust first reasonable match.**
 
@@ -186,7 +186,7 @@ digraph solving_mode_decision {
 
 - [ ] **Set follow-up if needed**
   - Does this need deeper analysis later?
-  - Flag for understanding-with-frameworks when not urgent
+  - Flag for think-understanding-with-frameworks when not urgent
   - But don't block current action on future analysis
 
 **Time check: 30 seconds. Then STOP and execute action.**
@@ -263,7 +263,7 @@ subagent_used: [false or "discovery search if Option B"]
 [Select one:]
 - **No follow-up:** Problem resolved with single framework application
 - **Monitor:** Track outcome, may need adjustment
-- **Deep analysis needed:** Flag for understanding-with-frameworks if this becomes chronic pattern
+- **Deep analysis needed:** Flag for think-understanding-with-frameworks if this becomes chronic pattern
 
 **If flagged for broad mode:**
 - Chronic pattern emerging: [Yes/No]
@@ -283,7 +283,7 @@ subagent_used: [false or "discovery search if Option B"]
 
 ---
 
-*Generated using solving-with-frameworks v2.0 with optional subagent optimization*
+*Generated using think-solving-with-frameworks v2.0 with optional subagent optimization*
 ```
 
 - [ ] **Quick link from source (optional, 10s):**
@@ -348,7 +348,7 @@ Decision: YES, this applies exactly
 
 - Applied: **Extreme Ownership**
 - Outcome: Clear action taken within 5 minutes
-- Follow-up: Schedule deeper analysis of why timeline estimation was wrong (use understanding-with-frameworks next week)
+- Follow-up: Schedule deeper analysis of why timeline estimation was wrong (use think-understanding-with-frameworks next week)
 
 **TOTAL: 4.5 minutes from problem statement to email drafted and sent**
 
@@ -358,7 +358,7 @@ Decision: YES, this applies exactly
 |---------|--------|-----|
 | **Read 5+ frameworks** | Analysis paralysis, no action taken | Read 1-2 max, pick good enough |
 | **Deep analysis of all sections** | Spent 20 min (should use broad mode) | Skim limitations in narrow mode |
-| **Wrong mode** (chronic problem as acute) | Band-aid on systemic issue | Check: Is this ongoing? → Use understanding-with-frameworks |
+| **Wrong mode** (chronic problem as acute) | Band-aid on systemic issue | Check: Is this ongoing? → Use think-understanding-with-frameworks |
 | **Second-guessed framework choice** | Wasted time, delayed action | Trust first reasonable match |
 | **Skipped action step** | Read but didn't apply | Phase 4 is MANDATORY - commit specific action |
 | **Spent 15+ minutes** | Wrong mode, should be broad | Narrow = 3-5 min. If longer, escalate to broad mode |
@@ -367,12 +367,12 @@ Decision: YES, this applies exactly
 ## Red Flags - Switch to Broad Mode
 
 If you notice during narrow mode:
-- "This problem has many dimensions" → understanding-with-frameworks
-- "Multiple frameworks apply equally" → understanding-with-frameworks
-- "I need to understand root cause first" → understanding-with-frameworks
-- "This keeps happening" (chronic pattern) → understanding-with-frameworks
-- "No single framework fits well" → understanding-with-frameworks
-- "Spent more than 5 minutes already" → understanding-with-frameworks
+- "This problem has many dimensions" → think-understanding-with-frameworks
+- "Multiple frameworks apply equally" → think-understanding-with-frameworks
+- "I need to understand root cause first" → think-understanding-with-frameworks
+- "This keeps happening" (chronic pattern) → think-understanding-with-frameworks
+- "No single framework fits well" → think-understanding-with-frameworks
+- "Spent more than 5 minutes already" → think-understanding-with-frameworks
 
 **All mean: Wrong mode. Escalate to comprehensive synthesis.**
 
@@ -467,20 +467,20 @@ You know narrow mode was RIGHT choice when:
 |-----------------|------------------------|
 | "Need to read multiple frameworks to be thorough" | "NO. Good enough beats perfect when time-pressured. ONE framework." |
 | "Should analyze why I picked wrong initially" | "NO. That's for later broad mode. Take action now." |
-| "This problem seems complex, need synthesis" | "Then WRONG MODE. Escalate to understanding-with-frameworks" |
+| "This problem seems complex, need synthesis" | "Then WRONG MODE. Escalate to think-understanding-with-frameworks" |
 | "5 minutes isn't enough to understand properly" | "Narrow mode ISN'T about understanding. It's about ACTION." |
 | "Want to be sure before acting" | "Perfect information isn't available. Act on good enough." |
 
 ## Integration with Other Skills
 
 **Calls:**
-- skills/knowledge-resources/discovering-relevant-frameworks - Quick discovery (Entry Point 1 only)
+- skills/knowledge-resources/think-discovering-relevant-frameworks - Quick discovery (Entry Point 1 only)
 
 **Called by:**
-- skills/knowledge-resources/context-aware-reasoning - Orchestration determines narrow vs broad mode
+- skills/knowledge-resources/think-context-aware-reasoning - Orchestration determines narrow vs broad mode
 
 **Related:**
-- skills/knowledge-resources/understanding-with-frameworks - Broad mode for strategic problems
+- skills/knowledge-resources/think-understanding-with-frameworks - Broad mode for strategic problems
 
 ## Remember
 
