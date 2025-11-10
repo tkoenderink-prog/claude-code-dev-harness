@@ -9,7 +9,7 @@ echo ""
 
 # Configuration
 GLOBAL_SRC="$HOME/.claude/skills"
-PLUGIN_SRC="$HOME/.claude/plugins/cache/superpowers/skills"
+DEV_SKILLS_SRC="$HOME/.claude/plugins/cache/claude-dev-skills"
 DEST="./.claude/skills"
 
 # Exclude local-only skills
@@ -48,10 +48,10 @@ done
 echo "Synced $synced_count global skills"
 echo ""
 
-# Sync plugin skills
-echo "Syncing plugin skills from $PLUGIN_SRC..."
+# Sync development skills
+echo "Syncing development skills from $DEV_SKILLS_SRC..."
 synced_count=0
-for skill_dir in "$PLUGIN_SRC"/*; do
+for skill_dir in "$DEV_SKILLS_SRC"/*; do
   skill=$(basename "$skill_dir")
 
   if [ -d "$skill_dir" ]; then
@@ -60,7 +60,7 @@ for skill_dir in "$PLUGIN_SRC"/*; do
     ((synced_count++))
   fi
 done
-echo "Synced $synced_count plugin skills"
+echo "Synced $synced_count development skills"
 echo ""
 
 # Summary

@@ -25,7 +25,7 @@ Index, archive, and maintain conversations for search.
 - **Semantic search** across all past conversations
 - **AI summaries** (Claude Haiku with Sonnet fallback)
 - **Recovery modes** (verify, repair, rebuild)
-- **Permanent archive** at `~/.config/superpowers/conversation-archive/`
+- **Permanent archive** at `~/.claude/conversation-archive/`
 
 ## Setup
 
@@ -89,7 +89,7 @@ Handles existing hooks gracefully (merge or replace). Runs in background after e
 
 **Summaries failing:**
 - Check API key: `echo $ANTHROPIC_API_KEY`
-- Check logs in ~/.config/superpowers/conversation-index/
+- Check logs in ~/.claude/conversation-index/
 - Try manual: `./index-conversations --session <uuid>`
 
 **Search not finding results:**
@@ -101,7 +101,7 @@ Handles existing hooks gracefully (merge or replace). Runs in background after e
 
 To exclude specific projects from indexing (e.g., meta-conversations), create:
 
-`~/.config/superpowers/conversation-index/exclude.txt`
+`~/.claude/conversation-index/exclude.txt`
 ```
 # One project name per line
 # Lines starting with # are comments
@@ -115,10 +115,10 @@ export CONVERSATION_SEARCH_EXCLUDE_PROJECTS="project1,project2"
 
 ## Storage
 
-- **Archive:** `~/.config/superpowers/conversation-archive/<project>/<uuid>.jsonl`
-- **Summaries:** `~/.config/superpowers/conversation-archive/<project>/<uuid>-summary.txt`
-- **Database:** `~/.config/superpowers/conversation-index/db.sqlite`
-- **Exclusions:** `~/.config/superpowers/conversation-index/exclude.txt` (optional)
+- **Archive:** `~/.claude/conversation-archive/<project>/<uuid>.jsonl`
+- **Summaries:** `~/.claude/conversation-archive/<project>/<uuid>-summary.txt`
+- **Database:** `~/.claude/conversation-index/db.sqlite`
+- **Exclusions:** `~/.claude/conversation-index/exclude.txt` (optional)
 
 ## Technical Details
 

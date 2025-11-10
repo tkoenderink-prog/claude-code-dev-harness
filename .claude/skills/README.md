@@ -4,10 +4,10 @@ This directory contains project-local skills for the Claude Code Development Har
 
 ## Overview
 
-**Total Skills:** 136 active skills + 1 special directory
-- **Converted Skills:** 77 (from old categorized structure)
-- **User Skills:** 38 (from ~/.claude/skills/)
-- **Plugin Skills:** 20 (from Superpowers plugin)
+**Total Skills:** 135 active skills + 1 special directory
+- **Converted Skills:** 77 (template skills from old categorized structure)
+- **User Skills:** 38 (personal custom skills)
+- **Development Skills:** 19 (core development workflows)
 - **Local Skills:** 1 (fixing-claude-code-hooks)
 - **Special:** commands/ (slash command implementations)
 

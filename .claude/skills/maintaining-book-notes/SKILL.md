@@ -91,7 +91,7 @@ Consistent documentation enables:
 
 - [ ] **Read the maintaining-influential-people-notes skill**
   ```bash
-  Read: ${SUPERPOWERS_SKILLS_ROOT}/skills/knowledge-resources/maintaining-influential-people-notes/SKILL.md
+  Read: .claude/skills/knowledge-resources/maintaining-influential-people-notes/SKILL.md
   ```
 
 - [ ] **Announce skill usage**
@@ -185,7 +185,7 @@ Consistent documentation enables:
 
 - [ ] **Read the maintaining-mental-model-notes skill**
   ```bash
-  Read: ${SUPERPOWERS_SKILLS_ROOT}/skills/knowledge-resources/maintaining-mental-model-notes/SKILL.md
+  Read: .claude/skills/knowledge-resources/maintaining-mental-model-notes/SKILL.md
   ```
 
 - [ ] **For EACH mental model identified in Phase 5:**

@@ -216,10 +216,10 @@ dependencies: [other-skills]
 
 This project includes a comprehensive local skills repository in `.claude/skills/`:
 
-**Total Skills:** 136 active skills
-- **Converted Skills:** 77 (from old categorized structure)
-- **User Skills:** 38 (from ~/.claude/skills/)
-- **Plugin Skills:** 20 (from Superpowers plugin)
+**Total Skills:** 135 active skills
+- **Converted Skills:** 77 (template skills from old categorized structure)
+- **User Skills:** 38 (personal custom skills)
+- **Development Skills:** 19 (core development workflows)
 - **Local Skills:** 1 (fixing-claude-code-hooks)
 
 **Structure:** Official Claude Code format - flat directory with `skill-name/SKILL.md`
@@ -239,7 +239,7 @@ Skill(skill-name)
 - Security (10) - Security practices
 - Testing (10) - Testing strategies
 - Meta (4) - Skills about skills
-- Superpowers (17) - Dev workflows
+- Development Workflows (19) - TDD, debugging, code review
 - Obsidian (8) - Knowledge management
 - Physical Training (5) - Workout programs
 - Knowledge Resources (7) - Mental models

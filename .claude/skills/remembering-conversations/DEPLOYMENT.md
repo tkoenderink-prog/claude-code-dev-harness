@@ -77,10 +77,10 @@ If issues found:
 ls -l ~/.claude/hooks/sessionEnd
 
 # Check recent conversations
-ls -lt ~/.config/superpowers/conversation-archive/*/*.jsonl | head -5
+ls -lt ~/.claude/conversation-archive/*/*.jsonl | head -5
 
 # Check database size
-ls -lh ~/.config/superpowers/conversation-index/db.sqlite
+ls -lh ~/.claude/conversation-index/db.sqlite
 
 # Full verification
 ./index-conversations --verify
@@ -190,14 +190,14 @@ sleep 60 && ./index-conversations --repair
 ./index-conversations --verify
 
 # 2. Check database exists and has data
-ls -lh ~/.config/superpowers/conversation-index/db.sqlite
+ls -lh ~/.claude/conversation-index/db.sqlite
 # Should be > 100KB if conversations indexed
 
 # 3. Try text search (exact match)
 ./search-conversations --text "exact phrase from conversation"
 
 # 4. Check for corruption
-sqlite3 ~/.config/superpowers/conversation-index/db.sqlite "SELECT COUNT(*) FROM exchanges;"
+sqlite3 ~/.claude/conversation-index/db.sqlite "SELECT COUNT(*) FROM exchanges;"
 # Should show number > 0
 ```
 
@@ -221,7 +221,7 @@ rm -rf ~/.cache/transformers  # Force re-download
 **Fix:**
 ```bash
 # 1. Backup current database
-cp ~/.config/superpowers/conversation-index/db.sqlite ~/.config/superpowers/conversation-index/db.sqlite.backup
+cp ~/.claude/conversation-index/db.sqlite ~/.claude/conversation-index/db.sqlite.backup
 
 # 2. Rebuild from scratch
 ./index-conversations --rebuild
@@ -300,7 +300,7 @@ cp ~/.config/superpowers/conversation-index/db.sqlite ~/.config/superpowers/conv
         └── prompts/
             └── search-agent.md    # Subagent template
 
-~/.config/superpowers/
+~/.claude/
 ├── conversation-archive/          # Archived conversations
 │   └── <project>/
 │       ├── <uuid>.jsonl          # Conversation file

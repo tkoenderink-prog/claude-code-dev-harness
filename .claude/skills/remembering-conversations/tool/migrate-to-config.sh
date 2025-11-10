@@ -7,15 +7,15 @@
 set -euo pipefail
 
 # Determine target directory
-SUPERPOWERS_DIR="${PERSONAL_SUPERPOWERS_DIR:-${XDG_CONFIG_HOME:-$HOME/.config}/superpowers}"
+CLAUDE_CONFIG_DIR="${PERSONAL_CLAUDE_CONFIG_DIR:-${XDG_CONFIG_HOME:-$HOME/.config}/superpowers}"
 
 OLD_ARCHIVE="$HOME/.clank/conversation-archive"
 OLD_INDEX="$HOME/.clank/conversation-index"
 
-NEW_ARCHIVE="${SUPERPOWERS_DIR}/conversation-archive"
-NEW_INDEX="${SUPERPOWERS_DIR}/conversation-index"
+NEW_ARCHIVE="${CLAUDE_CONFIG_DIR}/conversation-archive"
+NEW_INDEX="${CLAUDE_CONFIG_DIR}/conversation-index"
 
-echo "Migration: ~/.clank → ${SUPERPOWERS_DIR}"
+echo "Migration: ~/.clank → ${CLAUDE_CONFIG_DIR}"
 echo ""
 
 # Check if source exists
@@ -53,7 +53,7 @@ else
 fi
 
 echo ""
-echo "Destination: ${SUPERPOWERS_DIR}"
+echo "Destination: ${CLAUDE_CONFIG_DIR}"
 echo ""
 
 # Confirm
@@ -65,7 +65,7 @@ if [[ ! $REPLY =~ ^[Yy]$ ]]; then
 fi
 
 # Ensure destination base exists
-mkdir -p "${SUPERPOWERS_DIR}"
+mkdir -p "${CLAUDE_CONFIG_DIR}"
 
 # Migrate archive
 if [[ -d "$OLD_ARCHIVE" ]]; then
@@ -84,7 +84,7 @@ fi
 # Update database paths to point to new location
 if [[ -f "$NEW_INDEX/db.sqlite" ]]; then
     echo "Updating database paths..."
-    sqlite3 "$NEW_INDEX/db.sqlite" "UPDATE exchanges SET archive_path = REPLACE(archive_path, '/.clank/', '/.config/superpowers/') WHERE archive_path LIKE '%/.clank/%';"
+    sqlite3 "$NEW_INDEX/db.sqlite" "UPDATE exchanges SET archive_path = REPLACE(archive_path, '/.clank/', '/.claude/') WHERE archive_path LIKE '%/.clank/%';"
     echo "  ✓ Database paths updated"
 fi
 
