@@ -1,0 +1,1373 @@
+{
+  "total_skills": 135,
+  "categories": {
+    "API & Web": 2,
+    "Architecture": 10,
+    "Development": 16,
+    "Security": 10,
+    "Database": 12,
+    "Deployment & DevOps": 12,
+    "Debugging": 12,
+    "Documentation": 7,
+    "Decision Making & Problem Solving": 5,
+    "Meta & Workflow": 12,
+    "Knowledge & Learning": 6,
+    "Testing": 12,
+    "Obsidian & PKM": 10,
+    "Cognitive & Mental Models": 3,
+    "Physical Training": 5,
+    "Code Review": 1
+  },
+  "skills": [
+    {
+      "name": "api-design",
+      "category": "API & Web",
+      "description": "Use when working with rest/graphql api design in your project - provides architecture best practices and implementation patterns",
+      "when_to_use": "REST/GraphQL API design - Use when working with api design in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2059,
+      "has_frontmatter": true
+    },
+    {
+      "name": "api-documentation",
+      "category": "API & Web",
+      "description": "Use when working with api doc writing in your project - provides documentation best practices and implementation patterns",
+      "when_to_use": "API doc writing - Use when working with api documentation in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2072,
+      "has_frontmatter": true
+    },
+    {
+      "name": "architecture-docs",
+      "category": "Architecture",
+      "description": "Use when working with architecture documentation in your project - provides documentation best practices and implementation patterns",
+      "when_to_use": "Architecture documentation - Use when working with architecture docs in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2094,
+      "has_frontmatter": true
+    },
+    {
+      "name": "async-patterns",
+      "category": "Development",
+      "description": "Use when working with asynchronous programming in your project - provides best practices and implementation patterns",
+      "when_to_use": "Asynchronous programming - Use when working with async patterns in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2064,
+      "has_frontmatter": true
+    },
+    {
+      "name": "authentication-patterns",
+      "category": "Security",
+      "description": "Use when working with auth implementation in your project - provides security best practices and implementation patterns",
+      "when_to_use": "Auth implementation - Use when working with authentication patterns in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2099,
+      "has_frontmatter": true
+    },
+    {
+      "name": "authorization-patterns",
+      "category": "Security",
+      "description": "Use when working with access control in your project - provides security best practices and implementation patterns",
+      "when_to_use": "Access control - Use when working with authorization patterns in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2085,
+      "has_frontmatter": true
+    },
+    {
+      "name": "backup-strategies",
+      "category": "Database",
+      "description": "Use when working with backup patterns in your project - provides database best practices and implementation patterns",
+      "when_to_use": "Backup patterns - Use when working with backup strategies in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2067,
+      "has_frontmatter": true
+    },
+    {
+      "name": "blue-green-deploy",
+      "category": "Deployment & DevOps",
+      "description": "Use when working with blue-green strategy in your project - provides deployment best practices and implementation patterns",
+      "when_to_use": "Blue-green strategy - Use when working with blue green deploy in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2077,
+      "has_frontmatter": true
+    },
+    {
+      "name": "brainstorming",
+      "category": "Database",
+      "description": "Use when creating or developing anything, before writing code or implementation plans - refines rough ideas into fully-formed designs through structured Socratic questioning, alternative exploration, ",
+      "when_to_use": "Not specified",
+      "complexity": "medium",
+      "lines": 166,
+      "file_size": 7370,
+      "has_frontmatter": true
+    },
+    {
+      "name": "breakpoint-strategies",
+      "category": "Debugging",
+      "description": "Use when working with strategic breakpoints in your project - provides debugging best practices and implementation patterns",
+      "when_to_use": "Strategic breakpoints - Use when working with breakpoint strategies in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2096,
+      "has_frontmatter": true
+    },
+    {
+      "name": "caching-strategies",
+      "category": "Architecture",
+      "description": "Use when working with cache design patterns in your project - provides architecture best practices and implementation patterns",
+      "when_to_use": "Cache design patterns - Use when working with caching strategies in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2087,
+      "has_frontmatter": true
+    },
+    {
+      "name": "canary-deploy",
+      "category": "Deployment & DevOps",
+      "description": "Use when working with canary releases in your project - provides deployment best practices and implementation patterns",
+      "when_to_use": "Canary releases - Use when working with canary deploy in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2053,
+      "has_frontmatter": true
+    },
+    {
+      "name": "changelog-writing",
+      "category": "Documentation",
+      "description": "Use when working with changelog maintenance in your project - provides documentation best practices and implementation patterns",
+      "when_to_use": "Changelog maintenance - Use when working with changelog writing in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2084,
+      "has_frontmatter": true
+    },
+    {
+      "name": "ci-setup",
+      "category": "Deployment & DevOps",
+      "description": "Use when working with ci pipeline configuration in your project - provides deployment best practices and implementation patterns",
+      "when_to_use": "CI pipeline configuration - Use when working with ci setup in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2053,
+      "has_frontmatter": true
+    },
+    {
+      "name": "code-comments",
+      "category": "Development",
+      "description": "Use when working with effective comments in your project - provides documentation best practices and implementation patterns",
+      "when_to_use": "Effective comments - Use when working with code comments in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2062,
+      "has_frontmatter": true
+    },
+    {
+      "name": "code-organization",
+      "category": "Development",
+      "description": "Use when working with code structure patterns in your project - provides best practices and implementation patterns",
+      "when_to_use": "Code structure patterns - Use when working with code organization in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2074,
+      "has_frontmatter": true
+    },
+    {
+      "name": "collision-zone-thinking",
+      "category": "Decision Making & Problem Solving",
+      "description": "Force unrelated concepts together to discover emergent properties - \"What if we treated X like Y?\"",
+      "when_to_use": "when conventional approaches feel inadequate and you need breakthrough innovation by forcing unrelated concepts together",
+      "complexity": "low",
+      "lines": 63,
+      "file_size": 2236,
+      "has_frontmatter": true
+    },
+    {
+      "name": "condition-based-waiting",
+      "category": "Meta & Workflow",
+      "description": "Use when tests have race conditions, timing dependencies, or inconsistent pass/fail behavior - replaces arbitrary timeouts with condition polling to wait for actual state changes, eliminating flaky te",
+      "when_to_use": "```dot\ndigraph when_to_use {\n    \"Test uses setTimeout/sleep?\" [shape=diamond];\n    \"Testing timing behavior?\" [shape=diamond];\n    \"Document WHY timeout needed\" [shape=box];\n    \"Use condition-based ",
+      "complexity": "medium",
+      "lines": 121,
+      "file_size": 3749,
+      "has_frontmatter": true
+    },
+    {
+      "name": "connection-pooling",
+      "category": "Database",
+      "description": "Use when working with pool management in your project - provides database best practices and implementation patterns",
+      "when_to_use": "Pool management - Use when working with connection pooling in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2071,
+      "has_frontmatter": true
+    },
+    {
+      "name": "context-aware-reasoning",
+      "category": "Knowledge & Learning",
+      "description": "Recognize when to query knowledge vault, select mode (solving/understanding), integrate frameworks into reasoning proactively",
+      "when_to_use": "before making decisions, solving problems, designing solutions, strategic planning, when stuck, or \"how should I...\" questions",
+      "complexity": "high",
+      "lines": 479,
+      "file_size": 18616,
+      "has_frontmatter": true
+    },
+    {
+      "name": "coverage-analysis",
+      "category": "Testing",
+      "description": "Use when working with code coverage optimization in your project - provides testing best practices and implementation patterns",
+      "when_to_use": "Code coverage optimization - Use when working with coverage analysis in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2088,
+      "has_frontmatter": true
+    },
+    {
+      "name": "creating-obsidian-notes",
+      "category": "Obsidian & PKM",
+      "description": "Search-first workflow prevents duplicates, orphans, and wrong placement in PARA vault",
+      "when_to_use": "when about to create any new note in Obsidian vault, before using Write tool",
+      "complexity": "medium",
+      "lines": 296,
+      "file_size": 9632,
+      "has_frontmatter": true
+    },
+    {
+      "name": "csrf-protection",
+      "category": "Security",
+      "description": "Use when working with csrf defense in your project - provides security best practices and implementation patterns",
+      "when_to_use": "CSRF defense - Use when working with csrf protection in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2053,
+      "has_frontmatter": true
+    },
+    {
+      "name": "database-design",
+      "category": "Database",
+      "description": "Use when working with database architecture in your project - provides architecture best practices and implementation patterns",
+      "when_to_use": "Database architecture - Use when working with database design in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2075,
+      "has_frontmatter": true
+    },
+    {
+      "name": "debugging-tools",
+      "category": "Debugging",
+      "description": "Use when working with debugger usage in your project - provides debugging best practices and implementation patterns",
+      "when_to_use": "Debugger usage - Use when working with debugging tools in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2058,
+      "has_frontmatter": true
+    },
+    {
+      "name": "deep-dive-research",
+      "category": "Knowledge & Learning",
+      "description": "15-30 minute comprehensive understanding when encountering a relevant cognitive bias",
+      "when_to_use": "when [[Quick Recognition]] identifies a bias you don't understand, recurring decision patterns, learning about decision-making, or preparing for high-stakes domains",
+      "complexity": "high",
+      "lines": 307,
+      "file_size": 13426,
+      "has_frontmatter": true
+    },
+    {
+      "name": "defense-in-depth",
+      "category": "Security",
+      "description": "Use when invalid data causes failures deep in execution, requiring validation at multiple system layers - validates at every layer data passes through to make bugs structurally impossible",
+      "when_to_use": "Not specified",
+      "complexity": "medium",
+      "lines": 128,
+      "file_size": 3883,
+      "has_frontmatter": true
+    },
+    {
+      "name": "dependency-injection",
+      "category": "Development",
+      "description": "Use when working with di patterns and ioc in your project - provides best practices and implementation patterns",
+      "when_to_use": "DI patterns and IoC - Use when working with dependency injection in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2078,
+      "has_frontmatter": true
+    },
+    {
+      "name": "design-patterns",
+      "category": "Development",
+      "description": "Use when working with common design patterns in your project - provides best practices and implementation patterns",
+      "when_to_use": "Common design patterns - Use when working with design patterns in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2064,
+      "has_frontmatter": true
+    },
+    {
+      "name": "developer-docs",
+      "category": "Documentation",
+      "description": "Use when working with developer documentation in your project - provides documentation best practices and implementation patterns",
+      "when_to_use": "Developer documentation - Use when working with developer docs in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2076,
+      "has_frontmatter": true
+    },
+    {
+      "name": "discovering-relevant-frameworks",
+      "category": "Knowledge & Learning",
+      "description": "Knowledge-graph-aware search finds mental models, books, people for current problem/domain using structural navigation",
+      "when_to_use": "when starting to solve problem, make decision, design solution, or user asks \"what do I know about X?\"",
+      "complexity": "high",
+      "lines": 483,
+      "file_size": 16584,
+      "has_frontmatter": true
+    },
+    {
+      "name": "discovering-vault-knowledge",
+      "category": "Obsidian & PKM",
+      "description": "Multi-strategy search finds existing knowledge before claiming ignorance or creating duplicates",
+      "when_to_use": "when exploring a topic, before writing new content, or when user asks \"what do I know about X\"",
+      "complexity": "high",
+      "lines": 321,
+      "file_size": 9130,
+      "has_frontmatter": true
+    },
+    {
+      "name": "dispatching-parallel-agents",
+      "category": "Obsidian & PKM",
+      "description": "Use when facing 3+ independent failures that can be investigated without shared state or dependencies - dispatches multiple Claude agents to investigate and fix independent problems concurrently",
+      "when_to_use": "```dot\ndigraph when_to_use {\n    \"Multiple failures?\" [shape=diamond];\n    \"Are they independent?\" [shape=diamond];\n    \"Single agent investigates all\" [shape=box];\n    \"One agent per problem domain\" ",
+      "complexity": "medium",
+      "lines": 181,
+      "file_size": 6192,
+      "has_frontmatter": true
+    },
+    {
+      "name": "docker-patterns",
+      "category": "Deployment & DevOps",
+      "description": "Use when working with containerization in your project - provides deployment best practices and implementation patterns",
+      "when_to_use": "Containerization - Use when working with docker patterns in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2063,
+      "has_frontmatter": true
+    },
+    {
+      "name": "domain-specific-application",
+      "category": "Deployment & DevOps",
+      "description": "Apply the right cognitive biases to the right situations based on domain context",
+      "when_to_use": "before entering high-stakes domain decisions, onboarding to new role/responsibility, or reviewing recurring decision patterns",
+      "complexity": "high",
+      "lines": 536,
+      "file_size": 33785,
+      "has_frontmatter": true
+    },
+    {
+      "name": "e2e-tests",
+      "category": "Testing",
+      "description": "Use when working with end-to-end testing in your project - provides testing best practices and implementation patterns",
+      "when_to_use": "End-to-end testing - Use when working with e2e tests in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2040,
+      "has_frontmatter": true
+    },
+    {
+      "name": "encryption-patterns",
+      "category": "Security",
+      "description": "Use when working with data encryption in your project - provides security best practices and implementation patterns",
+      "when_to_use": "Data encryption - Use when working with encryption patterns in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2075,
+      "has_frontmatter": true
+    },
+    {
+      "name": "error-handling",
+      "category": "Development",
+      "description": "Use when working with error handling strategies in your project - provides best practices and implementation patterns",
+      "when_to_use": "Error handling strategies - Use when working with error handling in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2066,
+      "has_frontmatter": true
+    },
+    {
+      "name": "event-driven",
+      "category": "Architecture",
+      "description": "Use when working with event-driven architecture in your project - provides architecture best practices and implementation patterns",
+      "when_to_use": "Event-driven architecture - Use when working with event driven in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2071,
+      "has_frontmatter": true
+    },
+    {
+      "name": "executing-plans",
+      "category": "Meta & Workflow",
+      "description": "Use when partner provides a complete implementation plan to execute in controlled batches with review checkpoints - loads plan, reviews critically, executes tasks in batches, reports for review betwee",
+      "when_to_use": "Not specified",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2264,
+      "has_frontmatter": true
+    },
+    {
+      "name": "finishing-a-development-branch",
+      "category": "Meta & Workflow",
+      "description": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup",
+      "when_to_use": "Not specified",
+      "complexity": "medium",
+      "lines": 201,
+      "file_size": 4250,
+      "has_frontmatter": true
+    },
+    {
+      "name": "fixing-claude-code-hooks",
+      "category": "Development",
+      "description": "Use when encountering Claude Code hook execution errors (SessionStart, Stop, UserPromptSubmit), hooks not executing at all, JSON parsing errors from hooks, permission denied errors, path issues with s",
+      "when_to_use": "Not specified",
+      "complexity": "high",
+      "lines": 649,
+      "file_size": 17331,
+      "has_frontmatter": true
+    },
+    {
+      "name": "functional-programming",
+      "category": "Development",
+      "description": "Use when working with fp concepts and patterns in your project - provides best practices and implementation patterns",
+      "when_to_use": "FP concepts and patterns - Use when working with functional programming in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2096,
+      "has_frontmatter": true
+    },
+    {
+      "name": "gardening-skills-wiki",
+      "category": "Meta & Workflow",
+      "description": "Maintain skills wiki health - check links, naming, cross-references, and coverage",
+      "when_to_use": "when adding, removing, or reorganizing skills, or periodically to maintain wiki health and validate links",
+      "complexity": "high",
+      "lines": 371,
+      "file_size": 9360,
+      "has_frontmatter": true
+    },
+    {
+      "name": "indexing-strategies",
+      "category": "Database",
+      "description": "Use when working with index design in your project - provides database best practices and implementation patterns",
+      "when_to_use": "Index design - Use when working with indexing strategies in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2069,
+      "has_frontmatter": true
+    },
+    {
+      "name": "infrastructure-code",
+      "category": "Development",
+      "description": "Use when working with iac patterns in your project - provides deployment best practices and implementation patterns",
+      "when_to_use": "IaC patterns - Use when working with infrastructure code in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2071,
+      "has_frontmatter": true
+    },
+    {
+      "name": "inline-documentation",
+      "category": "Documentation",
+      "description": "Use when working with inline doc patterns in your project - provides documentation best practices and implementation patterns",
+      "when_to_use": "Inline doc patterns - Use when working with inline documentation in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2092,
+      "has_frontmatter": true
+    },
+    {
+      "name": "input-validation",
+      "category": "Security",
+      "description": "Use when working with input sanitization in your project - provides security best practices and implementation patterns",
+      "when_to_use": "Input sanitization - Use when working with input validation in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2069,
+      "has_frontmatter": true
+    },
+    {
+      "name": "integration-tests",
+      "category": "Testing",
+      "description": "Use when working with integration testing in your project - provides testing best practices and implementation patterns",
+      "when_to_use": "Integration testing - Use when working with integration tests in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2074,
+      "has_frontmatter": true
+    },
+    {
+      "name": "inversion-exercise",
+      "category": "Deployment & DevOps",
+      "description": "Flip core assumptions to reveal hidden constraints and alternative approaches - \"what if the opposite were true?\"",
+      "when_to_use": "when stuck on unquestioned assumptions or feeling forced into \"the only way\" to do something",
+      "complexity": "low",
+      "lines": 59,
+      "file_size": 2029,
+      "has_frontmatter": true
+    },
+    {
+      "name": "kubernetes-deploy",
+      "category": "Deployment & DevOps",
+      "description": "Use when working with k8s deployment in your project - provides deployment best practices and implementation patterns",
+      "when_to_use": "K8s deployment - Use when working with kubernetes deploy in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2067,
+      "has_frontmatter": true
+    },
+    {
+      "name": "layered-architecture",
+      "category": "Architecture",
+      "description": "Use when working with layered design patterns in your project - provides architecture best practices and implementation patterns",
+      "when_to_use": "Layered design patterns - Use when working with layered architecture in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2099,
+      "has_frontmatter": true
+    },
+    {
+      "name": "logging-strategies",
+      "category": "Debugging",
+      "description": "Use when working with effective logging in your project - provides debugging best practices and implementation patterns",
+      "when_to_use": "Effective logging - Use when working with logging strategies in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2076,
+      "has_frontmatter": true
+    },
+    {
+      "name": "maintaining-book-notes",
+      "category": "Obsidian & PKM",
+      "description": "Research and document books with consistent structure, automatically create author profiles and extract mental models with full linking",
+      "when_to_use": "when processing new book, updating after reading, or found book mentioned without note",
+      "complexity": "high",
+      "lines": 577,
+      "file_size": 24043,
+      "has_frontmatter": true
+    },
+    {
+      "name": "maintaining-influential-people-notes",
+      "category": "Obsidian & PKM",
+      "description": "Create person profiles with philosophy, achievements, AND critical limitations in balanced analysis",
+      "when_to_use": "when processing book by new author, referencing thought leader, or creating mental model with specific creator",
+      "complexity": "high",
+      "lines": 433,
+      "file_size": 15388,
+      "has_frontmatter": true
+    },
+    {
+      "name": "maintaining-mental-model-notes",
+      "category": "Obsidian & PKM",
+      "description": "Extract and document thinking frameworks with consistent structure, prevent skill/model confusion",
+      "when_to_use": "when extracting mental model from book, creating standalone model note, or found \"this should be a mental model not scattered content\"",
+      "complexity": "high",
+      "lines": 424,
+      "file_size": 16174,
+      "has_frontmatter": true
+    },
+    {
+      "name": "memory-profiling",
+      "category": "Debugging",
+      "description": "Use when working with memory leak detection in your project - provides debugging best practices and implementation patterns",
+      "when_to_use": "Memory leak detection - Use when working with memory profiling in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2076,
+      "has_frontmatter": true
+    },
+    {
+      "name": "meta-pattern-recognition",
+      "category": "Cognitive & Mental Models",
+      "description": "Spot patterns appearing in 3+ domains to find universal principles",
+      "when_to_use": "when noticing the same pattern across 3+ different domains or experiencing d\u00e9j\u00e0 vu in problem-solving",
+      "complexity": "low",
+      "lines": 55,
+      "file_size": 2023,
+      "has_frontmatter": true
+    },
+    {
+      "name": "microservices",
+      "category": "Architecture",
+      "description": "Use when working with microservice patterns in your project - provides architecture best practices and implementation patterns",
+      "when_to_use": "Microservice patterns - Use when working with microservices in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2067,
+      "has_frontmatter": true
+    },
+    {
+      "name": "migration-patterns",
+      "category": "Architecture",
+      "description": "Use when working with database migrations in your project - provides database best practices and implementation patterns",
+      "when_to_use": "Database migrations - Use when working with migration patterns in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2079,
+      "has_frontmatter": true
+    },
+    {
+      "name": "mitigation-strategies",
+      "category": "Cognitive & Mental Models",
+      "description": "Practical debiasing techniques that work across multiple cognitive biases",
+      "when_to_use": "after identifying a bias via [[Quick Recognition]], when designing decision processes, or building personal debiasing systems",
+      "complexity": "medium",
+      "lines": 258,
+      "file_size": 14169,
+      "has_frontmatter": true
+    },
+    {
+      "name": "mobility-cycle-design",
+      "category": "Physical Training",
+      "description": "Creates 6-week mobility program synchronized with strength cycle, addressing benchmark priorities using Kelly Starrett, Egoscue, and FMS principles",
+      "when_to_use": "after benchmark complete, concurrent with strength cycle design, or when mobility limitations identified",
+      "complexity": "high",
+      "lines": 736,
+      "file_size": 22139,
+      "has_frontmatter": true
+    },
+    {
+      "name": "mobility-session-design",
+      "category": "Physical Training",
+      "description": "Creates today's specific mobility session by reading cycle plan and adapting to context (pre-workout/post-workout/standalone) and time available",
+      "when_to_use": "before mobility work, when ready for pre-workout prep, post-workout cool-down, or standalone mobility session",
+      "complexity": "high",
+      "lines": 582,
+      "file_size": 17767,
+      "has_frontmatter": true
+    },
+    {
+      "name": "mocking-strategies",
+      "category": "Testing",
+      "description": "Use when working with mock and stub patterns in your project - provides testing best practices and implementation patterns",
+      "when_to_use": "Mock and stub patterns - Use when working with mocking strategies in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2084,
+      "has_frontmatter": true
+    },
+    {
+      "name": "monolithic",
+      "category": "Architecture",
+      "description": "Use when working with monolithic patterns in your project - provides architecture best practices and implementation patterns",
+      "when_to_use": "Monolithic patterns - Use when working with monolithic in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2051,
+      "has_frontmatter": true
+    },
+    {
+      "name": "moving-notes-safely",
+      "category": "Obsidian & PKM",
+      "description": "Systematic workflow for moving Obsidian notes via CLI without breaking wikilinks and embeds",
+      "when_to_use": "when moving or reorganizing markdown files in Obsidian vault, renaming notes, or restructuring folder hierarchies",
+      "complexity": "high",
+      "lines": 338,
+      "file_size": 10843,
+      "has_frontmatter": true
+    },
+    {
+      "name": "mutation-testing",
+      "category": "Testing",
+      "description": "Use when working with mutation test strategies in your project - provides testing best practices and implementation patterns",
+      "when_to_use": "Mutation test strategies - Use when working with mutation testing in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2080,
+      "has_frontmatter": true
+    },
+    {
+      "name": "nosql-patterns",
+      "category": "Database",
+      "description": "Use when working with nosql strategies in your project - provides database best practices and implementation patterns",
+      "when_to_use": "NoSQL strategies - Use when working with nosql patterns in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2057,
+      "has_frontmatter": true
+    },
+    {
+      "name": "object-oriented",
+      "category": "Development",
+      "description": "Use when working with oop best practices in your project - provides best practices and implementation patterns",
+      "when_to_use": "OOP best practices - Use when working with object oriented in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2056,
+      "has_frontmatter": true
+    },
+    {
+      "name": "obsidian-linking-strategy",
+      "category": "Obsidian & PKM",
+      "description": "Strategic linking prevents orphans and builds knowledge graph through bidirectional connections and MOCs",
+      "when_to_use": "when deciding what to link, creating connections, or building knowledge graph structure",
+      "complexity": "high",
+      "lines": 391,
+      "file_size": 11069,
+      "has_frontmatter": true
+    },
+    {
+      "name": "orm-patterns",
+      "category": "Database",
+      "description": "Use when working with orm best practices in your project - provides database best practices and implementation patterns",
+      "when_to_use": "ORM best practices - Use when working with orm patterns in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2053,
+      "has_frontmatter": true
+    },
+    {
+      "name": "para-classification-decisions",
+      "category": "Deployment & DevOps",
+      "description": "Flowchart-based classification prevents wrong placement by focusing on actionability over topic",
+      "when_to_use": "when uncertain whether content is Project, Area, Resource, or Archive, before placing note in vault",
+      "complexity": "medium",
+      "lines": 296,
+      "file_size": 11188,
+      "has_frontmatter": true
+    },
+    {
+      "name": "performance-profiling",
+      "category": "Debugging",
+      "description": "Use when working with performance analysis in your project - provides debugging best practices and implementation patterns",
+      "when_to_use": "Performance analysis - Use when working with performance profiling in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2094,
+      "has_frontmatter": true
+    },
+    {
+      "name": "performance-testing",
+      "category": "Testing",
+      "description": "Use when working with load and stress testing in your project - provides testing best practices and implementation patterns",
+      "when_to_use": "Load and stress testing - Use when working with performance testing in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2090,
+      "has_frontmatter": true
+    },
+    {
+      "name": "physical-training-benchmark-week",
+      "category": "Physical Training",
+      "description": "Comprehensive strength and mobility assessment with autonomous program selection (CC/BLS/Hybrid)",
+      "when_to_use": "when starting new training cycle, reassessing after 6 weeks, injury recovery complete, or no active benchmark results in Physical Training folder",
+      "complexity": "high",
+      "lines": 542,
+      "file_size": 16157,
+      "has_frontmatter": true
+    },
+    {
+      "name": "pre-decision-checklist",
+      "category": "Deployment & DevOps",
+      "description": "Systematic 5-10 minute bias check before major decisions",
+      "when_to_use": "before high-stakes decisions, strategic planning, major commitments, or when Quick Recognition flags multiple biases",
+      "complexity": "high",
+      "lines": 427,
+      "file_size": 17270,
+      "has_frontmatter": true
+    },
+    {
+      "name": "preserving-productive-tensions",
+      "category": "Decision Making & Problem Solving",
+      "description": "Recognize when disagreements reveal valuable context, preserve multiple valid approaches instead of forcing premature resolution",
+      "when_to_use": "when oscillating between equally valid approaches that optimize for different legitimate priorities",
+      "complexity": "medium",
+      "lines": 153,
+      "file_size": 5092,
+      "has_frontmatter": true
+    },
+    {
+      "name": "production-debugging",
+      "category": "Debugging",
+      "description": "Use when working with live system debugging in your project - provides debugging best practices and implementation patterns",
+      "when_to_use": "Live system debugging - Use when working with production debugging in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2092,
+      "has_frontmatter": true
+    },
+    {
+      "name": "pulling-updates-from-skills-repository",
+      "category": "Meta & Workflow",
+      "description": "Sync local skills repository with upstream changes from obra/superpowers-skills",
+      "when_to_use": "when session start indicates new upstream skills available, or when manually updating to latest versions",
+      "complexity": "medium",
+      "lines": 139,
+      "file_size": 3830,
+      "has_frontmatter": true
+    },
+    {
+      "name": "query-optimization",
+      "category": "Database",
+      "description": "Use when working with sql optimization in your project - provides database best practices and implementation patterns",
+      "when_to_use": "SQL optimization - Use when working with query optimization in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2073,
+      "has_frontmatter": true
+    },
+    {
+      "name": "quick-recognition",
+      "category": "Cognitive & Mental Models",
+      "description": "2-minute diagnostic to identify which cognitive bias you're experiencing",
+      "when_to_use": "when stuck, uncertain, feeling strong emotion, or before committing to decision",
+      "complexity": "medium",
+      "lines": 298,
+      "file_size": 14058,
+      "has_frontmatter": true
+    },
+    {
+      "name": "reactive-programming",
+      "category": "Development",
+      "description": "Use when working with reactive patterns in your project - provides best practices and implementation patterns",
+      "when_to_use": "Reactive patterns - Use when working with reactive programming in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2074,
+      "has_frontmatter": true
+    },
+    {
+      "name": "readme-writing",
+      "category": "Documentation",
+      "description": "Use when working with readme creation in your project - provides documentation best practices and implementation patterns",
+      "when_to_use": "README creation - Use when working with readme writing in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2060,
+      "has_frontmatter": true
+    },
+    {
+      "name": "receiving-code-review",
+      "category": "Development",
+      "description": "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performative",
+      "when_to_use": "Not specified",
+      "complexity": "medium",
+      "lines": 210,
+      "file_size": 6111,
+      "has_frontmatter": true
+    },
+    {
+      "name": "remembering-conversations",
+      "category": "Obsidian & PKM",
+      "description": "Search previous Claude Code conversations for facts, patterns, decisions, and context using semantic or text search",
+      "when_to_use": "when partner mentions past discussions, debugging familiar issues, or seeking historical context about decisions and patterns",
+      "complexity": "low",
+      "lines": 70,
+      "file_size": 1966,
+      "has_frontmatter": true
+    },
+    {
+      "name": "remote-debugging",
+      "category": "Debugging",
+      "description": "Use when working with remote debug setup in your project - provides debugging best practices and implementation patterns",
+      "when_to_use": "Remote debug setup - Use when working with remote debugging in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2070,
+      "has_frontmatter": true
+    },
+    {
+      "name": "requesting-code-review",
+      "category": "Development",
+      "description": "Use when completing tasks, implementing major features, or before merging to verify work meets requirements - dispatches code-reviewer subagent to review implementation against plan or requirements be",
+      "when_to_use": "Not specified",
+      "complexity": "medium",
+      "lines": 106,
+      "file_size": 2772,
+      "has_frontmatter": true
+    },
+    {
+      "name": "retrieving-journal-entries",
+      "category": "Obsidian & PKM",
+      "description": "Find personal journal entries by date, topic, emotional state, metrics, or content patterns",
+      "when_to_use": "when searching for journal notes by date (august 2025, week 34), content (overwhelm, procrastination), metrics (sleep, status), or emotional patterns",
+      "complexity": "high",
+      "lines": 506,
+      "file_size": 13919,
+      "has_frontmatter": true
+    },
+    {
+      "name": "rollback-strategies",
+      "category": "Deployment & DevOps",
+      "description": "Use when working with rollback patterns in your project - provides deployment best practices and implementation patterns",
+      "when_to_use": "Rollback patterns - Use when working with rollback strategies in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2081,
+      "has_frontmatter": true
+    },
+    {
+      "name": "root-cause-analysis",
+      "category": "Debugging",
+      "description": "Use when working with rca methodology in your project - provides debugging best practices and implementation patterns",
+      "when_to_use": "RCA methodology - Use when working with root cause analysis in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2076,
+      "has_frontmatter": true
+    },
+    {
+      "name": "root-cause-tracing",
+      "category": "Debugging",
+      "description": "Use when errors occur deep in execution and you need to trace back to find the original trigger - systematically traces bugs backward through call stack, adding instrumentation when needed, to identif",
+      "when_to_use": "```dot\ndigraph when_to_use {\n    \"Bug appears deep in stack?\" [shape=diamond];\n    \"Can trace backwards?\" [shape=diamond];\n    \"Fix at symptom point\" [shape=box];\n    \"Trace to original trigger\" [shap",
+      "complexity": "medium",
+      "lines": 175,
+      "file_size": 5602,
+      "has_frontmatter": true
+    },
+    {
+      "name": "scalability-patterns",
+      "category": "Architecture",
+      "description": "Use when working with scaling strategies in your project - provides architecture best practices and implementation patterns",
+      "when_to_use": "Scaling strategies - Use when working with scalability patterns in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2089,
+      "has_frontmatter": true
+    },
+    {
+      "name": "scale-game",
+      "category": "Decision Making & Problem Solving",
+      "description": "Test at extremes (1000x bigger/smaller, instant/year-long) to expose fundamental truths hidden at normal scales",
+      "when_to_use": "when uncertain about scalability, edge cases unclear, or validating architecture for production volumes",
+      "complexity": "low",
+      "lines": 64,
+      "file_size": 2305,
+      "has_frontmatter": true
+    },
+    {
+      "name": "schema-design",
+      "category": "Database",
+      "description": "Use when working with database schema patterns in your project - provides database best practices and implementation patterns",
+      "when_to_use": "Database schema patterns - Use when working with schema design in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2069,
+      "has_frontmatter": true
+    },
+    {
+      "name": "secrets-handling",
+      "category": "Security",
+      "description": "Use when working with secret management in your project - provides security best practices and implementation patterns",
+      "when_to_use": "Secret management - Use when working with secrets handling in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2067,
+      "has_frontmatter": true
+    },
+    {
+      "name": "security-headers",
+      "category": "Security",
+      "description": "Use when working with http security headers in your project - provides security best practices and implementation patterns",
+      "when_to_use": "HTTP security headers - Use when working with security headers in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2075,
+      "has_frontmatter": true
+    },
+    {
+      "name": "security-testing",
+      "category": "Testing",
+      "description": "Use when working with security test patterns in your project - provides testing best practices and implementation patterns",
+      "when_to_use": "Security test patterns - Use when working with security testing in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2076,
+      "has_frontmatter": true
+    },
+    {
+      "name": "serverless",
+      "category": "Architecture",
+      "description": "Use when working with serverless architecture in your project - provides architecture best practices and implementation patterns",
+      "when_to_use": "Serverless architecture - Use when working with serverless in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2059,
+      "has_frontmatter": true
+    },
+    {
+      "name": "sharding-patterns",
+      "category": "Database",
+      "description": "Use when working with database sharding in your project - provides database best practices and implementation patterns",
+      "when_to_use": "Database sharding - Use when working with sharding patterns in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2071,
+      "has_frontmatter": true
+    },
+    {
+      "name": "sharing-skills",
+      "category": "Meta & Workflow",
+      "description": "Use when you've developed a broadly useful skill and want to contribute it upstream via pull request - guides process of branching, committing, pushing, and creating PR to contribute skills back to up",
+      "when_to_use": "Not specified",
+      "complexity": "medium",
+      "lines": 195,
+      "file_size": 4566,
+      "has_frontmatter": true
+    },
+    {
+      "name": "simplification-cascades",
+      "category": "Decision Making & Problem Solving",
+      "description": "Find one insight that eliminates multiple components - \"if this is true, we don't need X, Y, or Z\"",
+      "when_to_use": "when implementing the same concept multiple ways, accumulating special cases, or complexity is spiraling",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2821,
+      "has_frontmatter": true
+    },
+    {
+      "name": "solid-principles",
+      "category": "Development",
+      "description": "Use when working with solid design principles in your project - provides best practices and implementation patterns",
+      "when_to_use": "SOLID design principles - Use when working with solid principles in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2070,
+      "has_frontmatter": true
+    },
+    {
+      "name": "solving-with-frameworks",
+      "category": "Knowledge & Learning",
+      "description": "Fast targeted application - find single best mental model for acute problem, take action quickly (3-6 min with optional subagent + logging)",
+      "when_to_use": "when facing specific acute problem needing immediate action, missed deadline, conflict, decision with time pressure",
+      "complexity": "high",
+      "lines": 492,
+      "file_size": 17250,
+      "has_frontmatter": true
+    },
+    {
+      "name": "sql-injection-prevention",
+      "category": "Database",
+      "description": "Use when working with sql injection defense in your project - provides security best practices and implementation patterns",
+      "when_to_use": "SQL injection defense - Use when working with sql injection prevention in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2107,
+      "has_frontmatter": true
+    },
+    {
+      "name": "stack-trace-analysis",
+      "category": "Debugging",
+      "description": "Use when working with stack trace reading in your project - provides debugging best practices and implementation patterns",
+      "when_to_use": "Stack trace reading - Use when working with stack trace analysis in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2088,
+      "has_frontmatter": true
+    },
+    {
+      "name": "strength-cycle-design",
+      "category": "Physical Training",
+      "description": "Creates evidence-based 6-week strength program from benchmark results and training history (CC/BLS/Hybrid)",
+      "when_to_use": "after benchmark week complete, at end of 6-week cycle, or when starting new training phase with existing benchmark",
+      "complexity": "high",
+      "lines": 570,
+      "file_size": 16712,
+      "has_frontmatter": true
+    },
+    {
+      "name": "strength-workout-design",
+      "category": "Physical Training",
+      "description": "Creates today's specific strength workout by reading cycle plan, recent training, and adapting to current circumstances (location/time/recovery)",
+      "when_to_use": "before each strength training session, when ready to work out and need today's specific plan",
+      "complexity": "high",
+      "lines": 667,
+      "file_size": 19185,
+      "has_frontmatter": true
+    },
+    {
+      "name": "subagent-driven-development",
+      "category": "Meta & Workflow",
+      "description": "Use when executing implementation plans with independent tasks in the current session - dispatches fresh subagent for each task with code review between tasks, enabling fast iteration with quality gat",
+      "when_to_use": "Not specified",
+      "complexity": "medium",
+      "lines": 190,
+      "file_size": 5050,
+      "has_frontmatter": true
+    },
+    {
+      "name": "synthesis-dashboard-creation",
+      "category": "Knowledge & Learning",
+      "description": "Dataview-powered dashboards transform vault into actionable system through project, area, and task views",
+      "when_to_use": "when creating overview notes, project dashboards, area summaries, or need consolidated views",
+      "complexity": "high",
+      "lines": 559,
+      "file_size": 13397,
+      "has_frontmatter": true
+    },
+    {
+      "name": "system-design",
+      "category": "Architecture",
+      "description": "Use when working with system architecture design in your project - provides architecture best practices and implementation patterns",
+      "when_to_use": "System architecture design - Use when working with system design in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2077,
+      "has_frontmatter": true
+    },
+    {
+      "name": "systematic-debugging",
+      "category": "Debugging",
+      "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes - four-phase framework (root cause investigation, pattern analysis, hypothesis testing, implementation) that",
+      "when_to_use": "Use for ANY technical issue:\n- Test failures\n- Bugs in production\n- Unexpected behavior\n- Performance problems\n- Build failures\n- Integration issues\n\n**Use this ESPECIALLY when:**\n- Under time pressur",
+      "complexity": "medium",
+      "lines": 296,
+      "file_size": 9964,
+      "has_frontmatter": true
+    },
+    {
+      "name": "tdd-implementation",
+      "category": "Development",
+      "description": "Use when working with test-driven development cycle in your project - provides best practices and implementation patterns",
+      "when_to_use": "Test-driven development cycle - Use when working with tdd implementation in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2090,
+      "has_frontmatter": true
+    },
+    {
+      "name": "technical-writing",
+      "category": "Documentation",
+      "description": "Use when working with technical documentation in your project - provides documentation best practices and implementation patterns",
+      "when_to_use": "Technical documentation - Use when working with technical writing in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2088,
+      "has_frontmatter": true
+    },
+    {
+      "name": "test-data-generation",
+      "category": "Testing",
+      "description": "Use when working with test data and fixtures in your project - provides testing best practices and implementation patterns",
+      "when_to_use": "Test data and fixtures - Use when working with test data generation in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2092,
+      "has_frontmatter": true
+    },
+    {
+      "name": "test-driven-development",
+      "category": "Development",
+      "description": "Use when implementing any feature or bugfix, before writing implementation code - write the test first, watch it fail, write minimal code to pass; ensures tests actually verify behavior by requiring f",
+      "when_to_use": "**Always:**\n- New features\n- Bug fixes\n- Refactoring\n- Behavior changes\n\n**Exceptions (ask your human partner):**\n- Throwaway prototypes\n- Generated code\n- Configuration files\n\nThinking \"skip TDD just",
+      "complexity": "high",
+      "lines": 365,
+      "file_size": 9736,
+      "has_frontmatter": true
+    },
+    {
+      "name": "test-strategy-design",
+      "category": "Testing",
+      "description": "Use when working with test planning and strategy in your project - provides testing best practices and implementation patterns",
+      "when_to_use": "Test planning and strategy - Use when working with test strategy design in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2100,
+      "has_frontmatter": true
+    },
+    {
+      "name": "testing-anti-patterns",
+      "category": "Testing",
+      "description": "Use when writing or changing tests, adding mocks, or tempted to add test-only methods to production code - prevents testing mock behavior, production pollution with test-only methods, and mocking with",
+      "when_to_use": "Not specified",
+      "complexity": "high",
+      "lines": 303,
+      "file_size": 8404,
+      "has_frontmatter": true
+    },
+    {
+      "name": "testing-skills-with-subagents",
+      "category": "Testing",
+      "description": "Use when creating or editing skills, before deployment, to verify they work under pressure and resist rationalization - applies RED-GREEN-REFACTOR cycle to process documentation by running baseline wi",
+      "when_to_use": "Test skills that:\n- Enforce discipline (TDD, testing requirements)\n- Have compliance costs (time, effort, rework)\n- Could be rationalized away (\"just this once\")\n- Contradict immediate goals (speed ov",
+      "complexity": "high",
+      "lines": 388,
+      "file_size": 12733,
+      "has_frontmatter": true
+    },
+    {
+      "name": "thinking-through-a-decision",
+      "category": "Deployment & DevOps",
+      "description": "Structured decision-thinking framework with mental models, cognitive biases, and neutral clarifying questions (requires HITL)",
+      "when_to_use": "when human is wrestling with complex decision and wants structured thinking support using frameworks and biases, but needs to maintain ownership of reasoning and conclusion",
+      "complexity": "high",
+      "lines": 540,
+      "file_size": 20878,
+      "has_frontmatter": true
+    },
+    {
+      "name": "trace-analysis",
+      "category": "Debugging",
+      "description": "Use when working with distributed tracing in your project - provides debugging best practices and implementation patterns",
+      "when_to_use": "Distributed tracing - Use when working with trace analysis in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2064,
+      "has_frontmatter": true
+    },
+    {
+      "name": "tracing-knowledge-lineages",
+      "category": "Deployment & DevOps",
+      "description": "Understand how ideas evolved over time to find old solutions for new problems and avoid repeating past failures",
+      "when_to_use": "when questioning \"why do we use X\", before abandoning approaches, or evaluating \"new\" ideas that might be revivals",
+      "complexity": "medium",
+      "lines": 204,
+      "file_size": 7250,
+      "has_frontmatter": true
+    },
+    {
+      "name": "transaction-patterns",
+      "category": "Database",
+      "description": "Use when working with transaction design in your project - provides database best practices and implementation patterns",
+      "when_to_use": "Transaction design - Use when working with transaction patterns in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2085,
+      "has_frontmatter": true
+    },
+    {
+      "name": "tutorial-creation",
+      "category": "Documentation",
+      "description": "Use when working with tutorial writing in your project - provides documentation best practices and implementation patterns",
+      "when_to_use": "Tutorial writing - Use when working with tutorial creation in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2074,
+      "has_frontmatter": true
+    },
+    {
+      "name": "understanding-with-frameworks",
+      "category": "Knowledge & Learning",
+      "description": "Deep comprehensive synthesis with bias awareness - explore multiple mental models for chronic/strategic problems, identify tensions, counter cognitive biases (13-17 min with parallel subagents)",
+      "when_to_use": "when facing chronic systemic issue, strategic planning, multi-dimensional challenge, or need deep understanding before action",
+      "complexity": "high",
+      "lines": 1084,
+      "file_size": 47957,
+      "has_frontmatter": true
+    },
+    {
+      "name": "unit-tests",
+      "category": "Testing",
+      "description": "Use when working with unit test creation in your project - provides testing best practices and implementation patterns",
+      "when_to_use": "Unit test creation - Use when working with unit tests in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2044,
+      "has_frontmatter": true
+    },
+    {
+      "name": "user-guides",
+      "category": "Documentation",
+      "description": "Use when working with user guide creation in your project - provides documentation best practices and implementation patterns",
+      "when_to_use": "User guide creation - Use when working with user guides in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2056,
+      "has_frontmatter": true
+    },
+    {
+      "name": "using-git-worktrees",
+      "category": "Meta & Workflow",
+      "description": "Use when starting feature work that needs isolation from current workspace or before executing implementation plans - creates isolated git worktrees with smart directory selection and safety verificat",
+      "when_to_use": "Not specified",
+      "complexity": "medium",
+      "lines": 214,
+      "file_size": 5461,
+      "has_frontmatter": true
+    },
+    {
+      "name": "using-skills",
+      "category": "Meta & Workflow",
+      "description": "Use when starting any conversation - establishes mandatory workflows for finding and using skills, including mandatory first response protocol, using Skill tool before announcing usage, following brai",
+      "when_to_use": "Not specified",
+      "complexity": "medium",
+      "lines": 135,
+      "file_size": 5775,
+      "has_frontmatter": true
+    },
+    {
+      "name": "vault-weekly-review",
+      "category": "Code Review",
+      "description": "Systematic maintenance prevents vault degradation through inbox processing, link health, and metadata hygiene",
+      "when_to_use": "when conducting weekly review, or when vault feels disorganized, chaotic, or degraded",
+      "complexity": "high",
+      "lines": 329,
+      "file_size": 10279,
+      "has_frontmatter": true
+    },
+    {
+      "name": "verification-before-completion",
+      "category": "Meta & Workflow",
+      "description": "Use when about to claim work is complete, fixed, or passing, before committing or creating PRs - requires running verification commands and confirming output before making any success claims; evidence",
+      "when_to_use": "Not specified",
+      "complexity": "medium",
+      "lines": 140,
+      "file_size": 4201,
+      "has_frontmatter": true
+    },
+    {
+      "name": "vulnerability-scanning",
+      "category": "Security",
+      "description": "Use when working with security scanning in your project - provides security best practices and implementation patterns",
+      "when_to_use": "Security scanning - Use when working with vulnerability scanning in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2091,
+      "has_frontmatter": true
+    },
+    {
+      "name": "when-stuck",
+      "category": "Decision Making & Problem Solving",
+      "description": "Dispatch to the right problem-solving technique based on how you're stuck",
+      "when_to_use": "when stuck and unsure which problem-solving technique to apply for your specific type of stuck-ness",
+      "complexity": "low",
+      "lines": 89,
+      "file_size": 4099,
+      "has_frontmatter": true
+    },
+    {
+      "name": "writing-plans",
+      "category": "Meta & Workflow",
+      "description": "Use when design is complete and you need detailed implementation tasks for engineers with zero codebase context - creates comprehensive implementation plans with exact file paths, complete code exampl",
+      "when_to_use": "Not specified",
+      "complexity": "medium",
+      "lines": 117,
+      "file_size": 3417,
+      "has_frontmatter": true
+    },
+    {
+      "name": "writing-skills",
+      "category": "Meta & Workflow",
+      "description": "Use when creating new skills, editing existing skills, or verifying skills work before deployment - applies TDD to process documentation by testing with subagents before writing, iterating until bulle",
+      "when_to_use": "[Small inline flowchart IF decision non-obvious]\n\nBullet list with SYMPTOMS and use cases\nWhen NOT to use",
+      "complexity": "high",
+      "lines": 623,
+      "file_size": 20692,
+      "has_frontmatter": true
+    },
+    {
+      "name": "xss-prevention",
+      "category": "Security",
+      "description": "Use when working with xss protection in your project - provides security best practices and implementation patterns",
+      "when_to_use": "XSS protection - Use when working with xss prevention in your project.",
+      "complexity": "low",
+      "lines": 77,
+      "file_size": 2053,
+      "has_frontmatter": true
+    }
+  ]
+}
