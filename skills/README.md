@@ -1,29 +1,31 @@
-# Claude Code Development Harness - Skills Repository
+# Skills Repository - Detailed Catalog
 
-This directory contains project-local skills for the Claude Code Development Harness.
+**NOTE:** All skills have been moved to `.claude/skills/` (the official Claude Code location).
+This file remains for reference and detailed categorization.
 
 ## Overview
 
-**Total Skills:** 59
+**Total Skills:** 136 active skills in `.claude/skills/`
+- **Converted Skills:** 77 (from old categorized structure)
 - **User Skills:** 38 (from ~/.claude/skills/)
 - **Plugin Skills:** 20 (from Superpowers plugin)
 - **Local Skills:** 1 (fixing-claude-code-hooks)
+- **Special:** commands/ (slash command implementations)
 
-**Special Directories:**
-- **commands/** - Slash command implementations (not a skill)
+## Location
 
-## Directory Structure
-
-Skills are organized in a **flat structure** where each skill has its own directory:
+All skills are now in `.claude/skills/` using the official Claude Code format:
 
 ```
-skills/
+.claude/skills/
 ├── skill-name/
 │   ├── SKILL.md              # Main skill file (required)
 │   ├── supporting-files.*    # Optional supporting files
 │   └── scripts/              # Optional executable scripts
 └── README.md
 ```
+
+Use `.claude/skills/README.md` for a brief overview, or continue reading for detailed categorization.
 
 ## Skill Categories
 

@@ -3,32 +3,20 @@
   "hooks": {
     "SessionStart": [
       {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start"
-          }
-        ]
+        "type": "command",
+        "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start"
       }
     ],
     "UserPromptSubmit": [
       {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/user-prompt-submit"
-          }
-        ]
+        "type": "command",
+        "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/user-prompt-submit"
       }
     ],
     "Stop": [
       {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/stop"
-          }
-        ]
+        "type": "command",
+        "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/stop"
       }
     ]
   },
@@ -37,7 +25,7 @@
       "Read(**/*)",
       "Write(**/*)",
       "Edit(**/*)",
-      "Bash(*)"
+      "Bash"
     ],
     "deny": [
       "Read(.env*)",

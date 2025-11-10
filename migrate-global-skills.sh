@@ -2,7 +2,7 @@
 
 # Source and destination
 SRC="$HOME/.claude/skills"
-DEST="./skills"
+DEST="./.claude/skills"
 
 # Skills to migrate (all 38)
 SKILLS=(

@@ -7,7 +7,7 @@ set -e
 echo "=== Skills Health Check ==="
 echo ""
 
-SKILLS_DIR="./skills"
+SKILLS_DIR="./.claude/skills"
 errors=0
 warnings=0
 

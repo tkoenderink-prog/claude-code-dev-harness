@@ -214,40 +214,60 @@ dependencies: [other-skills]
 
 ### Project Skills Repository
 
-This project includes a complete local skills repository in `skills/`:
+This project includes a comprehensive local skills repository in `.claude/skills/`:
 
-**Total Skills:** 59 active skills + 1 special directory
+**Total Skills:** 136 active skills
+- **Converted Skills:** 77 (from old categorized structure)
 - **User Skills:** 38 (from ~/.claude/skills/)
 - **Plugin Skills:** 20 (from Superpowers plugin)
 - **Local Skills:** 1 (fixing-claude-code-hooks)
-- **Special:** commands/ (slash command implementations)
 
-**Structure:** Flat directory with each skill in its own subdirectory containing SKILL.md
+**Structure:** Official Claude Code format - flat directory with `skill-name/SKILL.md`
 
 **Usage:**
 ```
 Skill(skill-name)
 ```
 
-**Synchronization:** To update skills from global sources:
+**Categories:**
+- Architecture (10) - System design patterns
+- Database (10) - DB optimization & patterns
+- Debugging (10) - Debugging techniques
+- Deployment (7) - CI/CD strategies
+- Development (10) - Core dev practices
+- Documentation (10) - Technical writing
+- Security (10) - Security practices
+- Testing (10) - Testing strategies
+- Meta (4) - Skills about skills
+- Superpowers (17) - Dev workflows
+- Obsidian (8) - Knowledge management
+- Physical Training (5) - Workout programs
+- Knowledge Resources (7) - Mental models
+- Cognitive Biases (5) - Bias awareness
+- Problem Solving (6) - Problem-solving
+- Other (7) - Specialized skills
+
+**Synchronization:** Update from global sources:
 ```bash
 ./sync-skills.sh
 ```
 
-**Health Checks:** Validate skills structure:
+**Health Checks:** Validate structure:
 ```bash
 ./check-skills-health.sh
 ```
 
-**Documentation:** See `skills/README.md` for complete skills catalog with categories and descriptions.
+**Documentation:** See `.claude/skills/README.md` and `skills/README.md` for complete catalogs.
 
 **Key Skills for Development:**
 - `systematic-debugging` - Four-phase debugging framework
 - `test-driven-development` - RED-GREEN-REFACTOR cycle
 - `writing-skills` - TDD approach to creating skills
-- `fixing-claude-code-hooks` - Diagnose and fix hook errors
-- `context-aware-reasoning` - Apply mental models proactively
-- `verification-before-completion` - Verify work before finishing
+- `api-design` - REST/GraphQL API design
+- `tdd-implementation` - TDD practices
+- `fixing-claude-code-hooks` - Diagnose hook errors
+- `root-cause-analysis` - RCA methodology
+- `security-testing` - Security test strategies
 
 ## Workflow Patterns
 

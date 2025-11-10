@@ -2,7 +2,7 @@
 
 # Source and destination
 SRC="$HOME/.claude/plugins/cache/superpowers/skills"
-DEST="./skills"
+DEST="./.claude/skills"
 
 # Plugin skills to migrate (all 21)
 SKILLS=(

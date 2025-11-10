@@ -82,7 +82,17 @@ def check_harness_version(project_dir):
 
             if tags:
                 # Get latest version (sort semantically)
-                latest = sorted(tags, key=lambda v: [int(x) for x in v.split('.')], reverse=True)[0]
+                def parse_version(v):
+                    """Parse version string, handling non-standard formats."""
+                    try:
+                        # Remove any suffix (e.g., -beta, -rc1)
+                        base_version = v.split('-')[0]
+                        return [int(x) for x in base_version.split('.')]
+                    except (ValueError, AttributeError):
+                        # If parsing fails, treat as 0.0.0
+                        return [0, 0, 0]
+
+                latest = sorted(tags, key=parse_version, reverse=True)[0]
 
                 # Update cache
                 cache_dir.mkdir(parents=True, exist_ok=True)
@@ -109,6 +119,128 @@ Harness update available!
         # Any other error - fail silently
         return None
 
+def get_harness_overview(project_dir):
+    """
+    Get harness configuration overview.
+
+    Returns:
+        dict: Overview information including version, agents, skills
+    """
+    overview = {}
+
+    # Get version info from VERSION.lock
+    version_lock = project_dir / '.claude' / 'VERSION.lock'
+    if version_lock.exists():
+        config = {}
+        for line in version_lock.read_text().splitlines():
+            if ':' in line:
+                key, value = line.split(':', 1)
+                config[key.strip()] = value.strip().strip('"')
+
+        overview['version'] = config.get('harness_version', 'unknown')
+        overview['installed'] = config.get('installed_date', 'unknown')
+
+    # Count skills
+    skills_dir = project_dir / 'skills'
+    if skills_dir.exists():
+        skill_files = list(skills_dir.rglob('*.md'))
+        overview['skills_count'] = len(skill_files)
+
+        # Get skill categories
+        categories = set()
+        for skill_file in skill_files:
+            if skill_file.parent != skills_dir:
+                categories.add(skill_file.parent.name)
+        overview['skill_categories'] = sorted(categories)
+    else:
+        overview['skills_count'] = 0
+        overview['skill_categories'] = []
+
+    # Count agents from settings.json
+    settings_file = project_dir / '.claude' / 'settings.json'
+    if settings_file.exists():
+        try:
+            settings = json.loads(settings_file.read_text())
+            agents = settings.get('agents', {})
+            overview['agents'] = list(agents.keys())
+            overview['agents_count'] = len(agents)
+        except:
+            overview['agents'] = []
+            overview['agents_count'] = 0
+    else:
+        overview['agents'] = []
+        overview['agents_count'] = 0
+
+    # Count hooks
+    hooks_dir = project_dir / '.claude' / 'hooks'
+    if hooks_dir.exists():
+        hook_files = [f for f in hooks_dir.iterdir() if f.is_file() and not f.name.startswith('.')]
+        overview['hooks_count'] = len(hook_files)
+    else:
+        overview['hooks_count'] = 0
+
+    return overview
+
+def format_harness_banner(overview):
+    """
+    Format harness overview as an attractive banner.
+
+    Args:
+        overview: Dictionary with harness information
+
+    Returns:
+        str: Formatted banner
+    """
+    banner_lines = [
+        "╔════════════════════════════════════════════════════════════╗",
+        "║  Claude Code Development Harness                           ║",
+        "╠════════════════════════════════════════════════════════════╣"
+    ]
+
+    # Version info
+    if 'version' in overview:
+        banner_lines.append(f"║  Version: {overview['version']:<48} ║")
+        banner_lines.append(f"║  Installed: {overview['installed']:<46} ║")
+        banner_lines.append("╠════════════════════════════════════════════════════════════╣")
+
+    # Configuration stats
+    if 'agents_count' in overview:
+        banner_lines.append(f"║  Configured Agents: {overview['agents_count']:<38} ║")
+        if overview['agents']:
+            agents_str = ', '.join(overview['agents'])
+            # Wrap long agent lists
+            if len(agents_str) <= 52:
+                banner_lines.append(f"║    └─ {agents_str:<52} ║")
+            else:
+                # Split into multiple lines
+                words = overview['agents']
+                line = "    └─ "
+                for i, agent in enumerate(words):
+                    if len(line) + len(agent) + 2 > 57:
+                        banner_lines.append(f"║  {line:<57} ║")
+                        line = "       "
+                    line += agent
+                    if i < len(words) - 1:
+                        line += ", "
+                if line.strip():
+                    banner_lines.append(f"║  {line:<57} ║")
+
+    if 'skills_count' in overview:
+        banner_lines.append(f"║  Available Skills: {overview['skills_count']:<39} ║")
+        if overview['skill_categories']:
+            cats_str = ', '.join(overview['skill_categories'][:5])
+            if len(overview['skill_categories']) > 5:
+                cats_str += f" (+{len(overview['skill_categories']) - 5} more)"
+            if len(cats_str) <= 52:
+                banner_lines.append(f"║    └─ {cats_str:<52} ║")
+
+    if 'hooks_count' in overview:
+        banner_lines.append(f"║  Active Hooks: {overview['hooks_count']:<43} ║")
+
+    banner_lines.append("╚════════════════════════════════════════════════════════════╝")
+
+    return "\n".join(banner_lines)
+
 def main():
     """Main hook execution."""
     # Read hook input from stdin
@@ -121,36 +253,75 @@ def main():
     project_dir = Path(os.environ.get('CLAUDE_PROJECT_DIR', '.')).resolve()
     state_dir = project_dir / '.claude-state'
 
-    # Build context message from state files
-    context_parts = []
+    # Build output sections
+    output_sections = []
 
-    # Check harness version (NEW LOGIC)
+    # SECTION 1: Check for harness updates
     version_msg = check_harness_version(project_dir)
     if version_msg:
-        context_parts.append(version_msg)
+        output_sections.append("⚠️  " + version_msg.strip())
+        output_sections.append("")  # Blank line
 
-    # Load state files (EXISTING LOGIC)
+    # SECTION 2: Harness overview (only if current version)
+    if not version_msg:
+        overview = get_harness_overview(project_dir)
+        banner = format_harness_banner(overview)
+        output_sections.append(banner)
+        output_sections.append("")  # Blank line
+
+    # SECTION 3: State files status
+    state_files = {
+        'session.yaml': 'Current Session',
+        'preferences.yaml': 'User Preferences',
+        'decisions.yaml': 'Decision History',
+        'progress.yaml': 'Task Progress',
+        'context.json': 'Project Context'
+    }
+
+    loaded_states = []
     if state_dir.exists():
-        state_files = {
-            'session.yaml': 'Current Session',
-            'preferences.yaml': 'User Preferences',
-            'decisions.yaml': 'Decision History',
-            'progress.yaml': 'Task Progress',
-            'context.json': 'Project Context'
-        }
-
         for filename, title in state_files.items():
             file_path = state_dir / filename
             if file_path.exists():
                 content = file_path.read_text().strip()
                 if content:
-                    context_parts.append(f"## {title}\n```\n{content}\n```\n")
+                    loaded_states.append(f"## {title}\n```\n{content}\n```\n")
 
-    # Build response
-    if context_parts:
-        message = "# Session State\n\n" + "\n".join(context_parts)
+    # Check if we have any state files
+    if loaded_states:
+        output_sections.append("# Session State Loaded")
+        output_sections.append("")
+        output_sections.extend(loaded_states)
     else:
-        message = "Starting new session."
+        output_sections.append("ℹ️  **Fresh Session**: No state files found in `.claude-state/`")
+        output_sections.append("")
+        output_sections.append("   This is normal for a new session. State will be saved automatically")
+        output_sections.append("   as you work. State files include session history, preferences,")
+        output_sections.append("   decisions, and progress tracking.")
+        output_sections.append("")
+
+    # SECTION 4: Directive for Claude
+    directive = [
+        "---",
+        "",
+        "**IMPORTANT: Pass the following information to the user at the start of the session:**",
+        "",
+        "The harness overview above shows your current development environment configuration.",
+        "You have access to the configured agents and skills to help with development tasks.",
+        ""
+    ]
+
+    if loaded_states:
+        directive.append("Session state has been loaded from previous sessions. You can continue")
+        directive.append("from where you left off.")
+    else:
+        directive.append("This is a fresh session with no prior state. State will be saved automatically")
+        directive.append("as you work.")
+
+    output_sections.extend(directive)
+
+    # Build final message
+    message = "\n".join(output_sections)
 
     # Return response in correct format
     response = {

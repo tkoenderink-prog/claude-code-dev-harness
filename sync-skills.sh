@@ -10,7 +10,7 @@ echo ""
 # Configuration
 GLOBAL_SRC="$HOME/.claude/skills"
 PLUGIN_SRC="$HOME/.claude/plugins/cache/superpowers/skills"
-DEST="./skills"
+DEST="./.claude/skills"
 
 # Exclude local-only skills
 EXCLUDE_SKILLS=(
