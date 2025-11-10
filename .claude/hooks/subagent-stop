@@ -1,0 +1,149 @@
+#!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.9"
+# dependencies = []
+# ///
+
+"""
+SubagentStop Hook
+
+Runs when a Task (subagent) completes.
+
+Features:
+- Archives subagent conversation transcript
+- Generates task metadata (outcome, deliverables)
+- Updates subagent-specific index
+- Correlates with parent session
+
+Performance: <3 seconds execution time
+"""
+
+import json
+import sys
+import os
+from pathlib import Path
+
+# Add lib to path
+sys.path.insert(0, str(Path(__file__).parent / 'lib'))
+
+try:
+    from conversation_archiver import ConversationArchiver
+    from common import log_error
+    LIBS_AVAILABLE = True
+except ImportError:
+    LIBS_AVAILABLE = False
+
+
+def main():
+    """Main hook execution."""
+    try:
+        # Read hook input from stdin
+        hook_input = json.loads(sys.stdin.read())
+    except:
+        hook_input = {}
+
+    # Extract subagent information
+    task_id = hook_input.get('task_id', 'unknown')
+    agent_type = hook_input.get('agent_type', 'unknown')
+    parent_session_id = hook_input.get('parent_session_id', 'unknown')
+    transcript_path = hook_input.get('transcript_path', '')
+    outcome = hook_input.get('outcome', 'unknown')
+    task_description = hook_input.get('task_description', '')
+
+    # If agent_type is unknown, try to extract from transcript
+    if agent_type == 'unknown' and transcript_path:
+        try:
+            transcript_file = Path(transcript_path)
+            if transcript_file.exists():
+                # Read first 10 lines to find subagent_type
+                with open(transcript_file, 'r') as f:
+                    for _ in range(10):
+                        line = f.readline()
+                        if not line:
+                            break
+                        try:
+                            data = json.loads(line)
+                            # Check for subagent_type in various locations
+                            if 'subagent_type' in data:
+                                agent_type = data['subagent_type']
+                                break
+
+                            # Check in message.subagent_type
+                            msg = data.get('message', {})
+                            if isinstance(msg, dict) and 'subagent_type' in msg:
+                                agent_type = msg['subagent_type']
+                                break
+
+                            # Check in message.content[].input.subagent_type (Task tool invocation)
+                            content = msg.get('content', [])
+                            if isinstance(content, list):
+                                for item in content:
+                                    if isinstance(item, dict):
+                                        tool_input = item.get('input', {})
+                                        if isinstance(tool_input, dict) and 'subagent_type' in tool_input:
+                                            agent_type = tool_input['subagent_type']
+                                            break
+                                if agent_type != 'unknown':
+                                    break
+                        except:
+                            continue
+        except:
+            pass  # Keep as unknown if extraction fails
+
+    # Archive subagent conversation if libs available
+    if LIBS_AVAILABLE and transcript_path:
+        try:
+            transcript_file = Path(transcript_path)
+            if not transcript_file.exists():
+                log_error(
+                    f"Subagent transcript not found: {transcript_path}",
+                    level="WARNING"
+                )
+            else:
+                # Create archiver for specific agent type
+                archive_type = f"subagent/{agent_type}"
+                archiver = ConversationArchiver(archive_type)
+
+                # Additional metadata
+                additional_meta = {
+                    "task_id": task_id,
+                    "agent_type": agent_type,
+                    "parent_session_id": parent_session_id,
+                    "outcome": outcome,
+                    "task_description": task_description
+                }
+
+                # Generate full metadata
+                metadata = archiver.generate_metadata(
+                    session_id=task_id,
+                    transcript_path=transcript_path,
+                    additional_meta=additional_meta
+                )
+
+                # Archive session
+                archiver.archive_session(
+                    session_id=task_id,
+                    transcript_path=transcript_path,
+                    metadata=metadata,
+                    sanitize=False
+                )
+
+                # Update index
+                archiver.update_index(metadata)
+
+                log_error(
+                    f"Archived {agent_type} task {task_id}",
+                    level="INFO"
+                )
+
+        except Exception as e:
+            log_error(f"Failed to archive subagent conversation: {e}")
+
+    # Always return success
+    response = {"continue": True}
+    print(json.dumps(response))
+    sys.exit(0)
+
+
+if __name__ == "__main__":
+    main()

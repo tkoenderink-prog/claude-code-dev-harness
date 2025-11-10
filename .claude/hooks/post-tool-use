@@ -1,0 +1,101 @@
+#!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.9"
+# dependencies = []
+# ///
+
+"""
+PostToolUse Hook - Skill Usage Tracker
+
+Tracks every Skill tool invocation for usage analytics.
+
+Features:
+- Tracks skill name, context, success/failure
+- Correlates with session ID
+- Batched writes for performance
+- Non-blocking, error-resilient
+
+Performance: <1 second execution time
+"""
+
+import json
+import sys
+import os
+from pathlib import Path
+
+# Add lib to path
+sys.path.insert(0, str(Path(__file__).parent / 'lib'))
+
+try:
+    from skill_tracker import SkillTracker
+    from common import log_error, get_session_id
+except ImportError as e:
+    # Fallback if imports fail
+    print(json.dumps({"continue": True, "suppressOutput": True}))
+    sys.exit(0)
+
+
+def main():
+    """Main hook execution."""
+    try:
+        # Read hook input from stdin
+        hook_input = json.loads(sys.stdin.read())
+
+        # Only track Skill tool
+        tool_name = hook_input.get('tool_name', '')
+        if tool_name != 'Skill':
+            response = {"continue": True, "suppressOutput": True}
+            print(json.dumps(response))
+            sys.exit(0)
+
+        # Extract skill information
+        tool_input = hook_input.get('tool_input', {})
+        skill_name = tool_input.get('skill', '')  # Fixed: parameter is 'skill', not 'skill_name'
+
+        if not skill_name:
+            # No skill name, skip
+            response = {"continue": True, "suppressOutput": True}
+            print(json.dumps(response))
+            sys.exit(0)
+
+        context = tool_input.get('context', '')
+        session_id = get_session_id(hook_input)
+
+        # Check if skill execution was successful
+        tool_output = hook_input.get('tool_output', '')
+        tool_error = hook_input.get('tool_error', '')
+
+        success = True
+        if tool_error or 'error' in tool_output.lower()[:200]:
+            success = False
+
+        # Track the invocation
+        tracker = SkillTracker()
+        tracker.track(
+            skill_name=skill_name,
+            session_id=session_id,
+            context=context,
+            success=success
+        )
+        tracker.flush()  # Immediate flush for now
+
+        # Always continue and suppress output
+        response = {"continue": True, "suppressOutput": True}
+        print(json.dumps(response))
+        sys.exit(0)
+
+    except Exception as e:
+        # Log error but don't fail
+        try:
+            log_error(f"post-tool-use hook failed: {e}")
+        except:
+            pass
+
+        # Always continue
+        response = {"continue": True, "suppressOutput": True}
+        print(json.dumps(response))
+        sys.exit(0)
+
+
+if __name__ == "__main__":
+    main()

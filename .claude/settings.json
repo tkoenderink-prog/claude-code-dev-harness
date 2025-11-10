@@ -3,20 +3,53 @@
   "hooks": {
     "SessionStart": [
       {
-        "type": "command",
-        "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/session-start"
+          }
+        ]
       }
     ],
     "UserPromptSubmit": [
       {
-        "type": "command",
-        "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/user-prompt-submit"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/user-prompt-submit"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Skill",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/post-tool-use"
+          }
+        ]
       }
     ],
     "Stop": [
       {
-        "type": "command",
-        "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/stop"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/stop"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/subagent-stop"
+          }
+        ]
       }
     ]
   },

@@ -31,24 +31,58 @@ Claude Code hooks are shell commands or Python scripts that execute at specific 
 
 Follow this checklist systematically:
 
-**⚡ QUICK CHECK:** If your error shows a path with spaces being split (e.g., `/Library/Mobile: No such file or directory`), skip to Step 1 - you have the extra nested "hooks" wrapper bug. This fixes 80% of hook errors.
+**⚡ QUICK CHECK (Updated 2025):** If your error shows `hooks: Expected array, but received undefined`, skip to Step 1 - you're using the old hook format and need to add the required "hooks" array wrapper. This fixes 80% of hook errors.
 
 ### Step 1: Verify Hook Configuration Structure
 
 **Check:** Is your `.claude/settings.json` hook configuration correct?
 
-**Common mistake:** Extra nested "hooks" array in settings.json
+**IMPORTANT: Claude Code hook format changed in 2025** - All hooks now require the nested "hooks" array structure with optional matchers.
 
-**INCORRECT:**
+**INCORRECT (OLD FORMAT):**
 ```json
 {
   "hooks": {
     "SessionStart": [
       {
-        "hooks": [  // ❌ WRONG - extra "hooks" wrapper
+        "type": "command",  // ❌ WRONG - missing "hooks" wrapper
+        "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start"
+      }
+    ]
+  }
+}
+```
+
+**CORRECT (NEW FORMAT as of 2025):**
+```json
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [  // ✓ REQUIRED - "hooks" array wrapper
           {
             "type": "command",
-            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start"
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/session-start"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/stop"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/user-prompt-submit"
           }
         ]
       }
@@ -57,43 +91,28 @@ Follow this checklist systematically:
 }
 ```
 
-**CORRECT:**
-```json
-{
-  "hooks": {
-    "SessionStart": [
-      {
-        "type": "command",
-        "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start"
-      }
-    ],
-    "Stop": [
-      {
-        "type": "command",
-        "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/stop"
-      }
-    ],
-    "UserPromptSubmit": [
-      {
-        "type": "command",
-        "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/user-prompt-submit"
-      }
-    ]
-  }
-}
-```
+**CRITICAL: Quote $CLAUDE_PROJECT_DIR to handle spaces in paths!**
+
+The format requires TWO elements:
+1. ✓ "hooks" array wrapper (for validation)
+2. ✓ Quote the variable: `"\"$CLAUDE_PROJECT_DIR\""` (prevents path splitting on spaces)
 
 **How to fix:**
 1. Open `.claude/settings.json`
-2. For SessionStart, Stop, UserPromptSubmit hooks, use flat array structure
-3. For PreToolUse/PostToolUse hooks, you can optionally add a "matcher" field:
+2. For ALL hooks (SessionStart, Stop, UserPromptSubmit, PreToolUse, PostToolUse), wrap the hook definition in a "hooks" array
+3. Quote the `$CLAUDE_PROJECT_DIR` variable to prevent path splitting when your project path contains spaces
+4. Optionally add a "matcher" field for tool-specific hooks:
 
 ```json
 "PreToolUse": [
   {
     "matcher": "Write|Edit",  // Optional: only trigger for Write or Edit tools
-    "type": "command",
-    "command": "your-hook-script"
+    "hooks": [                // Required: wrap in hooks array
+      {
+        "type": "command",
+        "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/your-hook-script"
+      }
+    ]
   }
 ]
 ```
@@ -313,45 +332,67 @@ head -n 1 .claude/hooks/session-start  # Should be #!/usr/bin/env python3
 
 ## Common Error Messages & Solutions
 
-### "Failed with non-blocking status code: /bin/sh: .../Library/Mobile: No such file or directory"
+### "hooks: Expected array, but received undefined"
 
-**Symptom:** Hook error shows a path with spaces being split incorrectly (e.g., `/Users/tijlkoenderink/Library/Mobile Documents/...` becomes `/Library/Mobile: No such file or directory`)
+**Symptom:** Hook validation error showing `hooks: Expected array, but received undefined` for SessionStart, Stop, or UserPromptSubmit hooks
 
-**Cause:** Extra nested `"hooks": [...]` wrapper in `.claude/settings.json` - This is the #1 most common hook configuration error
+**Cause:** Missing required `"hooks": [...]` array wrapper in `.claude/settings.json` - This is the #1 most common hook configuration error since the 2025 format change
 
-**Quick diagnostic:** If you see a space-separated path error, check settings.json structure FIRST
+**Quick diagnostic:** If you see "Expected array, but received undefined" for hooks, you're using the old format
 
 **Solution:**
 1. Open `.claude/settings.json`
-2. Look for this INCORRECT pattern:
+2. Look for this INCORRECT (old) pattern:
 ```json
 "SessionStart": [
   {
-    "hooks": [  // ❌ Remove this extra wrapper
+    "type": "command",  // ❌ Missing required "hooks" wrapper
+    "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start"
+  }
+]
+```
+
+3. Fix to this CORRECT (new 2025) pattern:
+```json
+"SessionStart": [
+  {
+    "hooks": [  // ✓ Required "hooks" array wrapper
       {
         "type": "command",
-        "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start"
+        "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/session-start"  // ✓ Quote variable
       }
     ]
   }
 ]
 ```
 
-3. Fix to this CORRECT pattern:
+4. Apply the same fix to `Stop`, `UserPromptSubmit`, and any other hooks
+5. **IMPORTANT:** Quote `$CLAUDE_PROJECT_DIR` if your path contains spaces (e.g., "Library/Mobile Documents")
+6. Validate JSON: `cat .claude/settings.json | python3 -m json.tool`
+7. Restart Claude Code
+
+**Why this happens:** Claude Code changed the hook format in 2025 to support matchers. All hooks now require the nested "hooks" array structure.
+
+### "Failed with non-blocking status code: /bin/sh: .../Library/Mobile: No such file or directory"
+
+**Symptom:** Hook error shows a path with spaces being split incorrectly (e.g., `/Users/tijlkoenderink/Library/Mobile Documents/...` becomes `/Library/Mobile: No such file or directory`)
+
+**Cause:** The `$CLAUDE_PROJECT_DIR` variable is not quoted in the command, causing the shell to split the path on spaces.
+
+**Solution:**
+Quote the `$CLAUDE_PROJECT_DIR` variable in your command:
+
+**INCORRECT:**
 ```json
-"SessionStart": [
-  {
-    "type": "command",
-    "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/session-start"
-  }
-]
+"command": "$CLAUDE_PROJECT_DIR/.claude/hooks/stop"
 ```
 
-4. Apply the same fix to `Stop`, `UserPromptSubmit`, and any other hooks with the extra wrapper
-5. Validate JSON: `cat .claude/settings.json | python3 -m json.tool`
-6. Restart Claude Code
+**CORRECT:**
+```json
+"command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/stop"
+```
 
-**Why this happens:** The extra nested array causes Claude Code to incorrectly parse the command string, leading to improper quote handling and path-splitting on spaces.
+**Why this works:** Quoting the variable prevents the shell from splitting the expanded path on spaces, treating the entire path as a single token.
 
 ### "SessionStart:startup hook error"
 

@@ -6,8 +6,16 @@
 
 """
 Stop Hook
+
 Runs when Claude Code session ends.
-Updates session state with end timestamp.
+
+Features:
+- Updates session state with end timestamp
+- Archives conversation transcript
+- Generates session metadata
+- Updates archive index
+
+Performance: <5 seconds execution time
 """
 
 import json
@@ -16,7 +24,19 @@ import os
 from pathlib import Path
 from datetime import datetime
 
+# Add lib to path
+sys.path.insert(0, str(Path(__file__).parent / 'lib'))
+
+try:
+    from conversation_archiver import ConversationArchiver
+    from common import log_error, get_session_id
+    LIBS_AVAILABLE = True
+except ImportError:
+    LIBS_AVAILABLE = False
+
+
 def main():
+    """Main hook execution."""
     # Read hook input
     try:
         hook_input = json.loads(sys.stdin.read())
@@ -30,30 +50,66 @@ def main():
     # Ensure state directory exists
     state_dir.mkdir(parents=True, exist_ok=True)
 
-    # Update session file with end timestamp
-    session_file = state_dir / 'session.yaml'
+    # Get session ID
+    session_id = hook_input.get("session_id", "unknown")
     timestamp = datetime.now().isoformat()
 
-    if session_file.exists():
-        content = session_file.read_text()
-        if 'ended_at:' not in content:
-            content += f"\nended_at: \"{timestamp}\"\n"
-            session_file.write_text(content)
+    # Update session file with end timestamp
+    try:
+        session_file = state_dir / 'session.yaml'
+        if session_file.exists():
+            content = session_file.read_text()
+            if 'ended_at:' not in content:
+                content += f"\nended_at: \"{timestamp}\"\n"
+                session_file.write_text(content)
+    except Exception as e:
+        if LIBS_AVAILABLE:
+            log_error(f"Failed to update session.yaml: {e}")
 
     # Log stop event
-    stop_log = state_dir / 'last-session.json'
-    stop_log.write_text(json.dumps({
-        "ended_at": timestamp,
-        "session_id": hook_input.get("session_id", "unknown")
-    }, indent=2))
+    try:
+        stop_log = state_dir / 'last-session.json'
+        stop_log.write_text(json.dumps({
+            "ended_at": timestamp,
+            "session_id": session_id
+        }, indent=2))
+    except Exception as e:
+        if LIBS_AVAILABLE:
+            log_error(f"Failed to write last-session.json: {e}")
+
+    # Archive transcript if available and libs loaded
+    if LIBS_AVAILABLE:
+        try:
+            transcript_path = hook_input.get('transcript_path', '')
+            if transcript_path and Path(transcript_path).exists():
+                # Create archiver
+                archiver = ConversationArchiver("main-session")
+
+                # Generate metadata
+                metadata = archiver.generate_metadata(
+                    session_id=session_id,
+                    transcript_path=transcript_path
+                )
+
+                # Archive session
+                archiver.archive_session(
+                    session_id=session_id,
+                    transcript_path=transcript_path,
+                    metadata=metadata,
+                    sanitize=False  # Don't sanitize by default
+                )
+
+                # Update index
+                archiver.update_index(metadata)
+
+        except Exception as e:
+            log_error(f"Failed to archive conversation: {e}")
 
     # Return success
-    response = {
-        "continue": True
-    }
-
+    response = {"continue": True}
     print(json.dumps(response))
     sys.exit(0)
+
 
 if __name__ == "__main__":
     main()
